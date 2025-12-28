@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Terminal } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
 const navItems = [{
   name: 'About',
   href: '#about'
@@ -55,13 +54,10 @@ export function Navbar() {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 dark:bg-cyan-400 transition-all group-hover:w-full" />
           </a>)}
 
-          {/* Theme Toggle */}
-          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
           <button className="p-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
