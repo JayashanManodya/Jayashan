@@ -64,11 +64,12 @@ const allProjects = [{
 },
 {
   title: 'Portfolio V1',
-  description: 'My first personal website built with vanilla HTML/CSS/JS. Showcases my early journey into web development.',
+  description: 'My first personal website built with HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
   category: 'Web',
   githubUrl: '#',
-  demoUrl: '#'
+  image: '/projectPhotos/Portfolio-V1.png',
+  demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }, {
   title: 'Sentiment Analyzer',
   description: 'NLP-based web app that analyzes social media comments to determine brand sentiment. Uses BERT model for high accuracy.',
