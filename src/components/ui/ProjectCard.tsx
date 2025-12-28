@@ -8,7 +8,7 @@ interface ProjectCardProps {
   image?: string;
   githubUrl?: string;
   demoUrl?: string;
-  category: string;
+  category: string | string[];
   index: number;
 }
 export function ProjectCard({
@@ -54,9 +54,13 @@ export function ProjectCard({
 
     <div className="relative z-20 p-6 -mt-20">
       <div className="flex justify-between items-start mb-4">
-        <span className="px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-950/50 border border-cyan-500/20 rounded-full">
-          {category}
-        </span>
+        <div className="flex flex-wrap gap-2">
+          {(Array.isArray(category) ? category : [category]).map(cat => (
+            <span key={cat} className="px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-950/50 border border-cyan-500/20 rounded-full">
+              {cat}
+            </span>
+          ))}
+        </div>
       </div>
 
       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">

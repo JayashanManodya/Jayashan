@@ -3,7 +3,7 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 const allProjects = [{
   title: 'RailLink – Next-Gen Train Scheduling & Booking System',
-  description: 'A full-stack railway management platform built with Spring Boot and Thymeleaf to modernize train scheduling and passenger booking. The system features an AI-powered chatbot for real-time assistance, automated email workflows using n8n for e-ticket delivery, and comprehensive admin controls for managing trains, routes, stations, and schedules.',
+  description: 'An AI-driven railway management platform with an intelligent chatbot at its core, built using Spring Boot and Thymeleaf to modernize train scheduling, passenger booking, automated e-ticketing via n8n, and end-to-end administrative operations.',
   tags: [
     'Java',
     'Spring Boot',
@@ -15,7 +15,7 @@ const allProjects = [{
     'n8n',
     'Full Stack'
   ],
-  category: 'WEB',
+  category: ['Web', 'AI/ML'],
   image: '/projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
@@ -73,8 +73,14 @@ const allProjects = [{
 }];
 export function Projects() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'AI/ML', 'Web', 'University'];
-  const filteredProjects = filter === 'All' ? allProjects : allProjects.filter(p => p.category === filter);
+  const categories = ['All', 'Web', 'AI/ML', 'Computer Vision', 'IoT'];
+  const filteredProjects = filter === 'All'
+    ? allProjects
+    : allProjects.filter(p =>
+      Array.isArray(p.category)
+        ? p.category.includes(filter)
+        : p.category === filter
+    );
   return <Section id="projects" className="bg-black/20">
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
