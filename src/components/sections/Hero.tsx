@@ -93,39 +93,7 @@ export function Hero() {
               </Button>
             </motion.div>
 
-            {/* Stats or Social Proof */}
-            <motion.div initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 1
-            }} className="flex gap-8 pt-8 border-t border-white/10 dark:border-white/10 light:border-slate-200">
-              <div>
-                <div className="text-3xl font-bold text-white dark:text-white light:text-slate-900">
-                  15+
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-500 light:text-slate-600">
-                  Projects
-                </div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white dark:text-white light:text-slate-900">
-                  3+
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-500 light:text-slate-600">
-                  Years Experience
-                </div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white dark:text-white light:text-slate-900">
-                  5+
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-500 light:text-slate-600">
-                  Technologies
-                </div>
-              </div>
-            </motion.div>
+
           </motion.div>
 
           {/* Right Side - Photo */}
