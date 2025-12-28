@@ -12,49 +12,41 @@ export function About() {
     desc: 'Extracting insights from complex datasets'
   }, {
     icon: Code,
-    label: 'Neural Networks',
-    desc: 'Building deep learning architectures'
+    label: 'Software Engineering',
+    desc: 'Engineering robust systems through clean code and structured design'
   }, {
     icon: Globe,
     label: 'AI Integration',
     desc: 'Deploying models to web applications'
   }];
   return <Section id="about">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            About <span className="text-cyan-400">Me</span>
-          </h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed">
-            <p>
-              I am a final year undergraduate student specializing in Artificial
-              Intelligence and Machine Learning. My journey began with a
-              curiosity about how machines perceive the world, which led me down
-              the rabbit hole of deep learning and computer vision.
-            </p>
-            <p>
-              Currently, I'm focused on scalable AI solutions and making complex
-              models accessible through intuitive web interfaces. I believe in
-              the power of open source and actively contribute to the developer
-              community.
-            </p>
-            <p>
-              When I'm not training models, you can find me participating in
-              hackathons, reading sci-fi novels, or exploring the latest
-              developments in generative AI.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {interests.map((item, idx) => <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-              <item.icon className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {item.label}
-              </h3>
-              <p className="text-sm text-gray-400">{item.desc}</p>
-            </div>)}
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          About <span className="text-cyan-400">Me</span>
+        </h2>
+        <div className="space-y-4 text-gray-400 leading-relaxed">
+          <p>
+            I am an undergraduate student at the Sri Lanka Institute of Information Technology (SLIIT), currently pursuing a B.Sc. (Hons) in Information Technology with a specialization in Artificial Intelligence. I have a strong interest in how intelligent systems can solve real-world problems, and I enjoy continuously learning new technologies that shape the future of computing.
+          </p>
+          <p>
+            My academic journey has helped me build a solid foundation in programming, data structures, software engineering, and AI-related concepts. I enjoy working on hands-on projects, experimenting with emerging tools, and applying theoretical knowledge to practical applications. I am particularly interested in areas such as machine learning, data analysis, and intelligent application development.
+          </p>
+          <p>
+            Beyond academics, I am motivated, curious, and always eager to improve my skills. I value teamwork, creativity, and problem-solving, and I aim to grow into a skilled IT professional who can contribute meaningfully to innovative and impactful technology solutions.
+          </p>
         </div>
       </div>
-    </Section>;
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {interests.map((item, idx) => <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+          <item.icon className="w-8 h-8 text-purple-400 mb-4" />
+          <h3 className="text-lg font-semibold text-white mb-2">
+            {item.label}
+          </h3>
+          <p className="text-sm text-gray-400">{item.desc}</p>
+        </div>)}
+      </div>
+    </div>
+  </Section>;
 }
