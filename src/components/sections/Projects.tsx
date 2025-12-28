@@ -2,14 +2,23 @@ import React, { useState } from 'react';
 import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 const allProjects = [{
-  title: 'Automated Room Comfort Control System',
-  description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
-  tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
-  category: 'IoT',
-  image: '/projectPhotos/Automated-Room-Comfort-Control-System.png',
-  githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
-
-}, {
+  title: 'PlateX',
+  description: 'An AI-powered computer vision system that detects and recognizes vehicle license plates from images using YOLOv12 and PaddleOCR. The system includes custom post-processing to format Sri Lankan-style license plates and extract vehicle details such as province, category, and fuel type, with a Flask-based web interface for visualization and CSV export.',
+  tags: [
+    'Python',
+    'Computer Vision',
+    'YOLO',
+    'PaddleOCR',
+    'Flask',
+    'OpenCV',
+    'Roboflow',
+    'OCR'
+  ],
+  category: 'Computer Vision',
+  image: '/projectPhotos/plateX.jpg',
+  githubUrl: 'https://github.com/JayashanManodya/PlateX',
+}
+  , {
   title: 'InkSpire BookStore',
   description: 'A modern online bookstore management system developed using Java EE technologies. The system provides secure user authentication, book inventory management, shopping cart functionality, order processing, and an admin dashboard, using a file-based data storage approach.',
   tags: [
@@ -25,9 +34,17 @@ const allProjects = [{
   category: 'Web',
   image: '/projectPhotos/InkSpire-BookStore.jpg',
   githubUrl: '#',
-  demoUrl: '#'
-}
-  , {
+},
+{
+  title: 'Automated Room Comfort Control System',
+  description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
+  tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
+  category: 'IoT',
+  image: '/projectPhotos/Automated-Room-Comfort-Control-System.png',
+  githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
+
+},
+{
   title: 'Portfolio V1',
   description: 'My first personal website built with vanilla HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
