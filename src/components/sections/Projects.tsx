@@ -23,7 +23,7 @@ const allProjects = [{
     'File Handling'
   ],
   category: 'Web',
-  image: '/projectPhotos/InkSpire-BookStore.jpeg',
+  image: '/projectPhotos/InkSpire-BookStore.jpg',
   githubUrl: '#',
   demoUrl: '#'
 }
