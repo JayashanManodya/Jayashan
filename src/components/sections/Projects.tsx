@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 const allProjects = [{
-  title: 'Neural Style Transfer',
-  description: 'A deep learning application that applies the artistic style of one image to the content of another using Convolutional Neural Networks (CNNs). Built with PyTorch and React.',
-  tags: ['Python', 'PyTorch', 'React', 'Flask'],
-  category: 'AI/ML',
-  githubUrl: '#',
-  demoUrl: '#'
+  title: 'Automated Room Comfort Control System',
+  description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
+  tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
+  category: 'IoT',
+  image: '/projectPhotos/Automated-Room-Comfort-Control-System.png',
+  githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
+
 }, {
   title: 'Smart Traffic System',
   description: 'Real-time traffic density estimation and signal control using computer vision. Reduces congestion by 30% in simulation tests.',
@@ -49,20 +50,20 @@ export function Projects() {
   const categories = ['All', 'AI/ML', 'Web', 'University'];
   const filteredProjects = filter === 'All' ? allProjects : allProjects.filter(p => p.category === filter);
   return <Section id="projects" className="bg-black/20">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Featured <span className="text-cyan-400">Projects</span>
-        </h2>
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        Featured <span className="text-cyan-400">Projects</span>
+      </h2>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map(cat => <button key={cat} onClick={() => setFilter(cat)} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat ? 'bg-cyan-500 text-black shadow-[0_0_15px_rgba(0,217,255,0.4)]' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'}`}>
-              {cat}
-            </button>)}
-        </div>
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {categories.map(cat => <button key={cat} onClick={() => setFilter(cat)} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat ? 'bg-cyan-500 text-black shadow-[0_0_15px_rgba(0,217,255,0.4)]' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'}`}>
+          {cat}
+        </button>)}
       </div>
+    </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project, index) => <ProjectCard key={project.title} {...project} index={index} />)}
-      </div>
-    </Section>;
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {filteredProjects.map((project, index) => <ProjectCard key={project.title} {...project} index={index} />)}
+    </div>
+  </Section>;
 }
