@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 const allProjects = [{
+  title: 'RailLink – Next-Gen Train Scheduling & Booking System',
+  description: 'A full-stack railway management platform built with Spring Boot and Thymeleaf to modernize train scheduling and passenger booking. The system features an AI-powered chatbot for real-time assistance, automated email workflows using n8n for e-ticket delivery, and comprehensive admin controls for managing trains, routes, stations, and schedules.',
+  tags: [
+    'Java',
+    'Spring Boot',
+    'Spring Security',
+    'Spring MVC',
+    'Thymeleaf',
+    'MySQL',
+    'AI Chatbot',
+    'n8n',
+    'Full Stack'
+  ],
+  category: 'WEB',
+  image: '/projectPhotos/railLink.png',
+  githubUrl: 'https://github.com/JayashanManodya/RailLink#',
+}
+  , {
   title: 'PlateX',
   description: 'An AI-powered computer vision system that detects and recognizes vehicle license plates from images using YOLOv12 and PaddleOCR. The system includes custom post-processing to format Sri Lankan-style license plates and extract vehicle details such as province, category, and fuel type, with a Flask-based web interface for visualization and CSV export.',
   tags: [
