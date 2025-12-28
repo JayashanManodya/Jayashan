@@ -1,9 +1,11 @@
-import React, { forwardRef } from 'react';
+import { forwardRef, ButtonHTMLAttributes } from 'react';
 import { motion } from 'framer-motion';
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 }
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   className = '',
   variant = 'primary',
@@ -22,12 +24,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
   };
+
   return <motion.button ref={ref} whileHover={{
     scale: 1.05
   }} whileTap={{
     scale: 0.95
   }} className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
-        {children}
-      </motion.button>;
+    {children}
+  </motion.button>;
 });
+
 Button.displayName = 'Button';
