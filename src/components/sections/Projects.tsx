@@ -70,27 +70,6 @@ const allProjects = [{
   githubUrl: '#',
   image: '/projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
-}, {
-  title: 'Sentiment Analyzer',
-  description: 'NLP-based web app that analyzes social media comments to determine brand sentiment. Uses BERT model for high accuracy.',
-  tags: ['NLP', 'Transformers', 'FastAPI', 'React'],
-  category: 'AI/ML',
-  githubUrl: '#',
-  demoUrl: '#'
-}, {
-  title: 'University Chatbot',
-  description: 'RAG-based chatbot for answering student queries about campus facilities, courses, and schedules.',
-  tags: ['LangChain', 'OpenAI API', 'Vector DB', 'Next.js'],
-  category: 'University',
-  githubUrl: '#',
-  demoUrl: '#'
-}, {
-  title: 'Crypto Predictor',
-  description: 'Time-series forecasting model for cryptocurrency prices using LSTM networks. Includes a dashboard for visualization.',
-  tags: ['TensorFlow', 'LSTM', 'Streamlit', 'Pandas'],
-  category: 'AI/ML',
-  githubUrl: '#',
-  demoUrl: '#'
 }];
 export function Projects() {
   const [filter, setFilter] = useState('All');
