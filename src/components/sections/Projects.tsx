@@ -18,8 +18,8 @@ const allProjects = [{
   category: 'WEB',
   image: '/projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
-}
-  , {
+},
+{
   title: 'PlateX',
   description: 'An AI-powered computer vision system that detects and recognizes vehicle license plates from images using YOLOv12 and PaddleOCR. The system includes custom post-processing to format Sri Lankan-style license plates and extract vehicle details such as province, category, and fuel type, with a Flask-based web interface for visualization and CSV export.',
   tags: [
