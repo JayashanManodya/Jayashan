@@ -10,13 +10,24 @@ const allProjects = [{
   githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
 
 }, {
-  title: 'Smart Traffic System',
-  description: 'Real-time traffic density estimation and signal control using computer vision. Reduces congestion by 30% in simulation tests.',
-  tags: ['OpenCV', 'YOLOv8', 'Python', 'IoT'],
-  category: 'AI/ML',
+  title: 'InkSpire BookStore',
+  description: 'A modern online bookstore management system developed using Java EE technologies. The system provides secure user authentication, book inventory management, shopping cart functionality, order processing, and an admin dashboard, using a file-based data storage approach.',
+  tags: [
+    'Java',
+    'Jakarta EE',
+    'Servlets',
+    'JSP',
+    'Maven',
+    'Tomcat',
+    'OOP',
+    'File Handling'
+  ],
+  category: 'Web',
+  image: '/projectPhotos/InkSpire-BookStore.jpeg',
   githubUrl: '#',
   demoUrl: '#'
-}, {
+}
+  , {
   title: 'Portfolio V1',
   description: 'My first personal website built with vanilla HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
