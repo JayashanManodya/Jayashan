@@ -24,7 +24,7 @@ export function Certifications() {
     return (
         <Section id="certifications" className="bg-slate-50">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">Certifications</h2>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Certifications</h2>
                 <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
             </div>
 
@@ -42,11 +42,11 @@ export function Certifications() {
                         <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#6366f1] group-hover:text-white transition-all duration-300">
                             <Award size={32} className="text-[#6366f1] group-hover:text-white" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-2 leading-none italic uppercase tracking-tight group-hover:text-[#6366f1] transition-colors">{cert.name}</h3>
-                        <p className="text-slate-500 font-bold italic uppercase tracking-widest text-sm mb-6">{cert.issuer}</p>
+                        <h3 className="text-2xl font-black text-slate-900 mb-2 leading-none uppercase tracking-tight group-hover:text-[#6366f1] transition-colors">{cert.name}</h3>
+                        <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mb-6">{cert.issuer}</p>
 
                         <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
-                            <span className="text-xs font-black text-slate-300 uppercase tracking-[0.2em] italic">{cert.year}</span>
+                            <span className="text-xs font-black text-slate-300 uppercase tracking-[0.2em]">{cert.year}</span>
                             <button className="text-[#6366f1] p-3 rounded-full hover:bg-indigo-50 transition-all">
                                 <ExternalLink size={20} />
                             </button>

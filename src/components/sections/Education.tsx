@@ -19,7 +19,7 @@ export function Education() {
   return (
     <Section id="education" className="bg-white">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">Academic Journey</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Academic Journey</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 

@@ -16,7 +16,7 @@ export function Contact() {
   return (
     <Section id="contact" className="bg-white">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">Let's Connect</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Let's Connect</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 
@@ -39,13 +39,13 @@ export function Contact() {
                 <Mail className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-xs font-black italic uppercase tracking-widest text-slate-400 mb-1">Email Me</p>
-                <p className="text-xl font-black text-slate-900 italic tracking-tight group-hover:text-[#6366f1] transition-colors">kpjmp28@gmail.com</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1">Email Me</p>
+                <p className="text-xl font-black text-slate-900 tracking-tight group-hover:text-[#6366f1] transition-colors">kpjmp28@gmail.com</p>
               </div>
             </a>
 
             <div className="pt-8">
-              <p className="text-xs font-black italic uppercase tracking-widest text-slate-400 mb-6 ml-1">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-6 ml-1">
                 Social Media
               </p>
               <div className="flex gap-4">
@@ -77,14 +77,14 @@ export function Contact() {
           <Input label="Name" placeholder="Jayashan Manodya" />
           <Input label="Email" type="email" placeholder="kpjmp28@gmail.com" />
           <Textarea label="Message" placeholder="Tell me about your project or opportunity..." />
-          <Button className="w-full bg-[#6366f1] hover:bg-indigo-700 text-white py-6 rounded-[24px] text-lg font-black italic uppercase tracking-widest shadow-lg shadow-[#6366f1]/20" size="lg">
+          <Button className="w-full bg-[#6366f1] hover:bg-indigo-700 text-white py-6 rounded-[24px] text-lg font-black uppercase tracking-widest shadow-lg shadow-[#6366f1]/20" size="lg">
             Send Message
           </Button>
         </motion.form>
       </div>
 
       <footer className="mt-32 pt-12 border-t border-slate-100 text-center">
-        <p className="text-slate-400 font-bold italic uppercase tracking-widest text-xs">© 2025 Jayashan Manodya. All rights reserved.</p>
+        <p className="text-slate-400 font-bold uppercase tracking-widest text-xs">© 2025 Jayashan Manodya. All rights reserved.</p>
       </footer>
     </Section>
   );

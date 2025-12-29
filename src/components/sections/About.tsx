@@ -24,7 +24,7 @@ export function About() {
   return (
     <Section id="about" className="bg-white">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">About Me</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">About Me</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 
@@ -59,7 +59,7 @@ export function About() {
               className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all group"
             >
               <item.icon className="w-10 h-10 text-[#6366f1] mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-black text-slate-900 mb-2 italic uppercase tracking-tight">
+              <h3 className="text-xl font-black text-slate-900 mb-2 uppercase tracking-tight">
                 {item.label}
               </h3>
               <p className="text-sm text-slate-500 font-medium leading-snug">{item.desc}</p>

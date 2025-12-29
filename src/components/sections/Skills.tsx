@@ -24,7 +24,7 @@ export function Skills() {
   return (
     <Section id="skills" className="bg-slate-50">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">Technical Arsenal</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Technical Arsenal</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
         <p className="text-slate-500 max-w-2xl mx-auto mt-8 font-medium">
           A comprehensive toolkit for building intelligent systems, from data

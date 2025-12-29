@@ -27,7 +27,7 @@ export function SkillCard({
         <div className="p-4 rounded-2xl bg-indigo-50 text-[#6366f1] group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
           <Icon size={28} />
         </div>
-        <h3 className="text-2xl font-black text-slate-900 italic uppercase tracking-tight">{title}</h3>
+        <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">{title}</h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
