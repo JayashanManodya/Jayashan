@@ -15,10 +15,27 @@ const allProjects = [{
     'PostCSS'
   ],
   category: 'Web',
-  image: 'projectPhotos/jayashan.online.png',
+  image: '/projectPhotos/Screenshot.png',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
+  title: 'RailLink – Next-Gen Train Scheduling & Booking System',
+  description: 'An AI-driven railway management platform with an intelligent chatbot at its core, built using Spring Boot and Thymeleaf to modernize train scheduling, passenger booking, automated e-ticketing via n8n, and end-to-end administrative operations.',
+  tags: [
+    'Java',
+    'Spring Boot',
+    'Spring Security',
+    'Spring MVC',
+    'Thymeleaf',
+    'MySQL',
+    'AI Chatbot',
+    'n8n',
+    'Full Stack'
+  ],
+  category: ['Web', 'AI/ML'],
+  image: '/projectPhotos/posterv1.png',
+  githubUrl: 'https://github.com/JayashanManodya/RailLink#',
+}, {
   title: 'RailLink – Next-Gen Train Scheduling & Booking System',
   description: 'An AI-driven railway management platform with an intelligent chatbot at its core, built using Spring Boot and Thymeleaf to modernize train scheduling, passenger booking, automated e-ticketing via n8n, and end-to-end administrative operations.',
   tags: [
