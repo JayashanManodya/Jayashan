@@ -154,11 +154,14 @@ export function Hero() {
               >
                 About
               </button>
-              <button
-                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-bold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95"
+              <a
+                href="https://drive.google.com/file/d/1JZQYZ-Puf2LWtscAlWrNKw3EuausQ1B-/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-bold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
               >
                 Download CV
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -201,7 +204,7 @@ export function Hero() {
 
               {/* Social Links Side Strip */}
               <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
-                <span className="text-xs font-bold text-slate-400 rotate-90 whitespace-nowrap mb-8 uppercase tracking-widest">
+                <span className="text-xs font-bold text-slate-400 rotate-90 whitespace-nowrap mb-8 tracking-widest">
                   Follow me on
                 </span>
                 <div className="w-px h-12 bg-slate-200" />
