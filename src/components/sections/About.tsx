@@ -1,6 +1,7 @@
-import React from 'react';
 import { Section } from '../ui/Section';
 import { Brain, Code, Database, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 export function About() {
   const interests = [{
     icon: Brain,
@@ -13,40 +14,59 @@ export function About() {
   }, {
     icon: Code,
     label: 'Software Engineering',
-    desc: 'Engineering robust systems through clean code and structured design'
+    desc: 'Engineering robust systems through clean code'
   }, {
     icon: Globe,
     label: 'AI Integration',
     desc: 'Deploying models to web applications'
   }];
-  return <Section id="about">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          About <span className="text-cyan-400">Me</span>
-        </h2>
-        <div className="space-y-4 text-gray-400 leading-relaxed">
-          <p>
-            I am an undergraduate student at the Sri Lanka Institute of Information Technology (SLIIT), currently pursuing a B.Sc. (Hons) in Information Technology with a specialization in Artificial Intelligence. I have a strong interest in how intelligent systems can solve real-world problems, and I enjoy continuously learning new technologies that shape the future of computing.
-          </p>
-          <p>
-            My academic journey has helped me build a solid foundation in programming, data structures, software engineering, and AI-related concepts. I enjoy working on hands-on projects, experimenting with emerging tools, and applying theoretical knowledge to practical applications. I am particularly interested in areas such as machine learning, data analysis, and intelligent application development.
-          </p>
-          <p>
-            Beyond academics, I am motivated, curious, and always eager to improve my skills. I value teamwork, creativity, and problem-solving, and I aim to grow into a skilled IT professional who can contribute meaningfully to innovative and impactful technology solutions.
-          </p>
-        </div>
+
+  return (
+    <Section id="about" className="bg-white">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">About Me</h2>
+        <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {interests.map((item, idx) => <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-          <item.icon className="w-8 h-8 text-purple-400 mb-4" />
-          <h3 className="text-lg font-semibold text-white mb-2">
-            {item.label}
-          </h3>
-          <p className="text-sm text-gray-400">{item.desc}</p>
-        </div>)}
+      <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-6 text-slate-600 leading-relaxed text-lg"
+        >
+          <p className="font-medium text-slate-900">
+            I am an undergraduate student at the Sri Lanka Institute of Information Technology (SLIIT), specializing in Artificial Intelligence.
+          </p>
+          <p>
+            My academic journey has helped me build a solid foundation in programming, data structures, and software engineering. I enjoy working on hands-on projects, experimenting with emerging tools, and applying theoretical knowledge to practical applications.
+          </p>
+          <p>
+            Beyond academics, I am motivated, curious, and always eager to improve my skills. I value teamwork, creativity, and problem-solving, and I aim to grow into a skilled IT professional.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {interests.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all group"
+            >
+              <item.icon className="w-10 h-10 text-[#6366f1] mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-black text-slate-900 mb-2 italic uppercase tracking-tight">
+                {item.label}
+              </h3>
+              <p className="text-sm text-slate-500 font-medium leading-snug">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </Section>;
+    </Section>
+  );
 }

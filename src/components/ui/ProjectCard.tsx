@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import { Button } from './Button';
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
   category: string | string[];
   index: number;
 }
+
 export function ProjectCard({
   title,
   description,
@@ -21,70 +23,71 @@ export function ProjectCard({
   demoUrl,
   index
 }: ProjectCardProps) {
-  return <motion.div initial={{
-    opacity: 0,
-    scale: 0.9
-  }} whileInView={{
-    opacity: 1,
-    scale: 1
-  }} viewport={{
-    once: true
-  }} transition={{
-    delay: index * 0.1,
-    duration: 0.5
-  }} className="group relative rounded-xl overflow-hidden bg-slate-900/40 border border-white/10 hover:border-cyan-500/30 transition-all duration-500">
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90 z-10" />
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      whileHover={{ y: -8 }}
+      className="group relative rounded-[40px] overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 flex flex-col h-full"
+    >
+      {/* Project Image */}
+      <div className="h-64 w-full bg-slate-50 relative overflow-hidden">
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[#6366f1]/10 to-indigo-500/10 flex items-center justify-center">
+            <span className="text-slate-300 font-black italic uppercase tracking-tighter">No Preview</span>
+          </div>
+        )}
 
-    {/* Project Image */}
-    <div className="h-48 w-full bg-slate-800 relative overflow-hidden">
-      {image ? (
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      ) : (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-cyan-500/20 blur-3xl rounded-full" />
-          <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-purple-500/20 blur-3xl rounded-full" />
-        </>
-      )}
-    </div>
-
-    <div className="relative z-20 p-6 -mt-20">
-      <div className="flex justify-between items-start mb-4">
-        <div className="flex flex-wrap gap-2">
+        {/* Category Overlay */}
+        <div className="absolute top-6 left-6 z-20 flex flex-wrap gap-2">
           {(Array.isArray(category) ? category : [category]).map(cat => (
-            <span key={cat} className="px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-950/50 border border-cyan-500/20 rounded-full">
+            <span key={cat} className="px-4 py-2 text-xs font-black italic uppercase tracking-wider bg-white/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50">
               {cat}
             </span>
           ))}
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-        {title}
-      </h3>
+      <div className="p-8 flex flex-col flex-1">
+        <h3 className="text-2xl font-black text-slate-900 mb-3 italic uppercase tracking-tight group-hover:text-[#6366f1] transition-colors leading-none">
+          {title}
+        </h3>
 
-      <p className="text-gray-400 mb-6 line-clamp-3">{description}</p>
+        <p className="text-slate-500 mb-6 font-medium line-clamp-3 leading-relaxed">
+          {description}
+        </p>
 
-      <div className="flex flex-wrap gap-2 mb-6">
-        {tags.map(tag => <span key={tag} className="text-xs text-gray-500 font-mono">
-          #{tag}
-        </span>)}
+        <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+          {tags.map(tag => (
+            <span key={tag} className="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 italic">
+              #{tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-4">
+          {demoUrl && (
+            <Button size="sm" className="bg-[#6366f1] hover:bg-indigo-700 text-white rounded-full px-6" onClick={() => window.open(demoUrl, '_blank')}>
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Demo
+            </Button>
+          )}
+          {githubUrl && (
+            <Button size="sm" variant="outline" className="border-slate-200 text-slate-600 hover:bg-slate-50 rounded-full px-6" onClick={() => window.open(githubUrl, '_blank')}>
+              <Github className="w-4 h-4 mr-2" />
+              Code
+            </Button>
+          )}
+        </div>
       </div>
-
-      <div className="flex gap-4">
-        {demoUrl && <Button size="sm" variant="outline" onClick={() => window.open(demoUrl, '_blank')}>
-          <ExternalLink className="w-4 h-4 mr-2" />
-          Demo
-        </Button>}
-        {githubUrl && <Button size="sm" variant="secondary" onClick={() => window.open(githubUrl, '_blank')}>
-          <Github className="w-4 h-4 mr-2" />
-          Code
-        </Button>}
-      </div>
-    </div>
-  </motion.div>;
+    </motion.div>
+  );
 }

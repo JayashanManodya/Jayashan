@@ -1,57 +1,45 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { BoxIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
+
 interface SkillCardProps {
   title: string;
   skills: string[];
-  icon: BoxIcon;
-  color: 'cyan' | 'purple' | 'blue' | 'green';
+  icon: LucideIcon;
   delay?: number;
 }
+
 export function SkillCard({
   title,
   skills,
   icon: Icon,
-  color,
   delay = 0
 }: SkillCardProps) {
-  const colorClasses = {
-    cyan: 'border-cyan-500/20 hover:border-cyan-500/50 shadow-cyan-500/5 hover:shadow-cyan-500/20',
-    purple: 'border-purple-500/20 hover:border-purple-500/50 shadow-purple-500/5 hover:shadow-purple-500/20',
-    blue: 'border-blue-500/20 hover:border-blue-500/50 shadow-blue-500/5 hover:shadow-blue-500/20',
-    green: 'border-emerald-500/20 hover:border-emerald-500/50 shadow-emerald-500/5 hover:shadow-emerald-500/20'
-  };
-  const iconColors = {
-    cyan: 'text-cyan-400',
-    purple: 'text-purple-400',
-    blue: 'text-blue-400',
-    green: 'text-emerald-400'
-  };
-  return <motion.div initial={{
-    opacity: 0,
-    y: 20
-  }} whileInView={{
-    opacity: 1,
-    y: 0
-  }} viewport={{
-    once: true
-  }} transition={{
-    delay,
-    duration: 0.5
-  }} whileHover={{
-    y: -5
-  }} className={`glass p-6 rounded-xl border transition-all duration-300 ${colorClasses[color]}`}>
-      <div className="flex items-center gap-4 mb-6">
-        <div className={`p-3 rounded-lg bg-white/5 ${iconColors[color]}`}>
-          <Icon size={24} />
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay, duration: 0.5 }}
+      whileHover={{ y: -5 }}
+      className="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-4 mb-8">
+        <div className="p-4 rounded-2xl bg-indigo-50 text-[#6366f1] group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
+          <Icon size={28} />
         </div>
-        <h3 className="text-xl font-bold text-white">{title}</h3>
+        <h3 className="text-2xl font-black text-slate-900 italic uppercase tracking-tight">{title}</h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => <span key={index} className="px-3 py-1 text-sm font-medium text-gray-300 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors">
+        {skills.map((skill, index) => (
+          <span
+            key={index}
+            className="px-4 py-2 text-sm font-bold text-slate-600 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#6366f1]/5 hover:border-[#6366f1]/20 hover:text-[#6366f1] transition-all duration-200"
+          >
             {skill}
-          </span>)}
+          </span>
+        ))}
       </div>
-    </motion.div>;
+    </motion.div>
+  );
 }

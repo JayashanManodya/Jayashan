@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
+
 interface TimelineItemProps {
   degree: string;
   institution: string;
@@ -9,6 +9,7 @@ interface TimelineItemProps {
   description: string;
   index: number;
 }
+
 export function TimelineItem({
   degree,
   institution,
@@ -17,39 +18,38 @@ export function TimelineItem({
   description,
   index
 }: TimelineItemProps) {
-  return <motion.div initial={{
-    opacity: 0,
-    x: -20
-  }} whileInView={{
-    opacity: 1,
-    x: 0
-  }} viewport={{
-    once: true
-  }} transition={{
-    delay: index * 0.2
-  }} className="relative pl-8 pb-12 border-l border-white/10 last:pb-0">
-      <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(0,217,255,0.5)]" />
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.2, duration: 0.6 }}
+      className="relative pl-10 pb-16 border-l-4 border-slate-100 last:pb-0 group"
+    >
+      {/* Timeline Dot */}
+      <div className="absolute left-[-14px] top-0 w-6 h-6 bg-white border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform duration-300 shadow-sm" />
 
-      <div className="glass p-6 rounded-xl hover:bg-white/5 transition-colors">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-          <h3 className="text-xl font-bold text-white">{degree}</h3>
-          <span className="flex items-center text-sm text-cyan-400 bg-cyan-950/30 px-3 py-1 rounded-full border border-cyan-500/20 w-fit">
-            <Calendar className="w-3 h-3 mr-2" />
+      <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+          <h3 className="text-2xl font-black text-slate-900 italic uppercase tracking-tight leading-tight">{degree}</h3>
+          <span className="flex items-center text-sm font-bold text-[#6366f1] bg-indigo-50 px-4 py-2 rounded-full w-fit">
+            <Calendar className="w-4 h-4 mr-2" />
             {period}
           </span>
         </div>
 
-        <div className="flex items-center text-gray-400 mb-4">
-          <span className="font-medium text-purple-400 mr-4">
+        <div className="flex flex-wrap items-center gap-6 mb-6">
+          <span className="text-lg font-black text-slate-600 italic uppercase tracking-wider">
             {institution}
           </span>
-          <span className="flex items-center text-sm">
-            <MapPin className="w-3 h-3 mr-1" />
+          <span className="flex items-center text-slate-400 font-bold text-sm">
+            <MapPin className="w-4 h-4 mr-2" />
             {location}
           </span>
         </div>
 
-        <p className="text-gray-400 leading-relaxed">{description}</p>
+        <p className="text-slate-600 leading-relaxed text-lg">{description}</p>
       </div>
-    </motion.div>;
+    </motion.div>
+  );
 }
