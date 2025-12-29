@@ -111,26 +111,26 @@ export function Hero() {
             className="flex-1 space-y-8 max-w-2xl"
           >
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.1]">
-                I'm{" "}
-                {text.split("").map((char, i) => (
-                  <span
-                    key={i}
-                    className={i < 8 ? "text-[#6366f1]" : "text-slate-900"}
-                  >
-                    {char}
-                  </span>
-                ))}
-                <motion.span
-                  animate={{ opacity: [0, 1, 0] }}
-                  transition={{
-                    duration: 0.8,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                  className="inline-block w-[4px] h-[0.8em] bg-[#6366f1] ml-1 align-middle"
-                />
-              </h1>
+              <div className="grid grid-cols-1 items-start">
+                <h1 className="invisible pointer-events-none select-none text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] col-start-1 row-start-1">
+                  I'm Jayashan Manodya
+                  <span className="inline-block w-[4px] h-[0.8em] ml-1 align-middle" />
+                </h1>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.1] col-start-1 row-start-1">
+                  I'm{" "}
+                  <span className="text-[#6366f1]">{text.substring(0, 8)}</span>
+                  <span className="text-slate-900">{text.substring(8)}</span>
+                  <motion.span
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{
+                      duration: 0.8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="inline-block w-[4px] h-[0.8em] bg-[#6366f1] ml-1 align-middle"
+                  />
+                </h1>
+              </div>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
