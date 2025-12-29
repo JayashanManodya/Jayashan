@@ -26,11 +26,11 @@ export function Skills() {
   }];
 
   return (
-    <Section id="skills" className="bg-slate-50">
+    <Section id="skills" className="bg-slate-50 dark:bg-[#06001a] transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter">Skills</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter">Skills</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
-        <p className="text-slate-500 max-w-2xl mx-auto mt-8 font-medium">
+        <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mt-8 font-medium">
           The technical stack I leverage to transform concepts into reality.
         </p>
       </div>

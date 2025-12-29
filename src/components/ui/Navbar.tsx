@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../contexts/ThemeContext';
 
 const navItems = [
   { name: 'Home', href: '#hero' },
@@ -16,6 +17,7 @@ const navItems = [
 export function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
     e.preventDefault();
@@ -31,14 +33,14 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-8 left-0 w-full z-50 px-4">
-      <div className="bg-[#6366f1] rounded-full px-6 py-2 flex items-center shadow-lg backdrop-blur-sm border border-white/20 w-fit mx-auto">
+      <div className="bg-[#6366f1] rounded-full px-6 py-2 flex items-center gap-4 shadow-lg backdrop-blur-sm border border-white/20 w-fit mx-auto">
         {/* Mobile Menu Button - Shown only on mobile */}
         <div className="md:hidden">
           <button
             className="p-2 text-white hover:text-white/80"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
@@ -58,6 +60,15 @@ export function Navbar() {
             </a>
           ))}
         </div>
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300"
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
       </div>
 
       {/* Mobile Nav Overlay */}
