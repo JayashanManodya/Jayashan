@@ -10,19 +10,21 @@ import { Projects } from '../components/sections/Projects';
 import { Contact } from '../components/sections/Contact';
 
 export function Portfolio() {
-  return <div className="bg-white min-h-screen text-slate-900 selection:bg-[#6366f1]/20 selection:text-[#6366f1]">
-    <ParticleBackground />
-    <Navbar />
+  return (
+    <div className="bg-white dark:bg-[#030014] min-h-screen text-slate-900 dark:text-gray-100 selection:bg-[#6366f1]/20 selection:text-[#6366f1] transition-colors duration-300">
+      <ParticleBackground />
+      <Navbar />
 
-    <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Certifications />
-      <Contact />
-    </main>
-  </div>;
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Certifications />
+        <Contact />
+      </main>
+    </div>
+  );
 }

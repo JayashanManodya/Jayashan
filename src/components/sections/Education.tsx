@@ -17,9 +17,9 @@ export function Education() {
   }];
 
   return (
-    <Section id="education" className="bg-white">
+    <Section id="education" className="bg-white dark:bg-[#030014] transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter">Academic Journey</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter">Academic Journey</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 

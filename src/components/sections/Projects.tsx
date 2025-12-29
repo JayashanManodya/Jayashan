@@ -86,9 +86,9 @@ export function Projects() {
     );
 
   return (
-    <Section id="projects" className="bg-slate-50">
+    <Section id="projects" className="bg-slate-50 dark:bg-[#06001a] transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter">Featured Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter">Featured Projects</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
 
         <div className="flex flex-wrap justify-center gap-3 mt-12">
@@ -98,7 +98,7 @@ export function Projects() {
               onClick={() => setFilter(cat)}
               className={`px-8 py-3 rounded-full text-sm font-black tracking-wider transition-all duration-300 shadow-sm ${filter === cat
                 ? 'bg-[#6366f1] text-white shadow-[#6366f1]/20 shadow-lg scale-105'
-                : 'bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900'
+                : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
                 }`}
             >
               {cat}

@@ -24,22 +24,22 @@ export function TimelineItem({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.2, duration: 0.6 }}
-      className="relative pl-10 pb-16 border-l-4 border-slate-100 last:pb-0 group"
+      className="relative pl-10 pb-16 border-l-4 border-slate-100 dark:border-slate-800 last:pb-0 group"
     >
       {/* Timeline Dot */}
-      <div className="absolute left-[-14px] top-0 w-6 h-6 bg-white border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform duration-300 shadow-sm" />
+      <div className="absolute left-[-14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform duration-300 shadow-sm" />
 
-      <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+      <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
-          <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight">{degree}</h3>
-          <span className="flex items-center text-sm font-bold text-[#6366f1] bg-indigo-50 px-4 py-2 rounded-full w-fit">
+          <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">{degree}</h3>
+          <span className="flex items-center text-sm font-bold text-[#6366f1] bg-indigo-50 dark:bg-indigo-900/20 px-4 py-2 rounded-full w-fit">
             <Calendar className="w-4 h-4 mr-2" />
             {period}
           </span>
         </div>
 
         <div className="flex flex-wrap items-center gap-6 mb-6">
-          <span className="text-lg font-black text-slate-600 tracking-wider">
+          <span className="text-lg font-black text-slate-600 dark:text-slate-300 tracking-wider">
             {institution}
           </span>
           <span className="flex items-center text-slate-400 font-bold text-sm">
@@ -48,7 +48,7 @@ export function TimelineItem({
           </span>
         </div>
 
-        <p className="text-slate-600 leading-relaxed text-lg">{description}</p>
+        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">{description}</p>
       </div>
     </motion.div>
   );

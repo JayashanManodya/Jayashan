@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white"
+      className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white dark:bg-[#030014] transition-colors duration-300"
     >
       {/* Background Animated Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -57,7 +57,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-purple-50 rounded-full blur-[100px] opacity-60"
+          className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-purple-50 dark:bg-purple-900/10 rounded-full blur-[100px] opacity-60"
         />
         <motion.div
           animate={{
@@ -70,7 +70,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-[20%] -right-[10%] w-[35%] h-[35%] bg-indigo-50 rounded-full blur-[100px] opacity-40"
+          className="absolute top-[20%] -right-[10%] w-[35%] h-[35%] bg-indigo-50 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-40"
         />
         <motion.div
           animate={{
@@ -82,7 +82,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-[5%] left-[20%] w-[30%] h-[30%] bg-blue-50 rounded-full blur-[80px] opacity-50"
+          className="absolute -bottom-[5%] left-[20%] w-[30%] h-[30%] bg-blue-50 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-50"
         />
       </div>
 
@@ -91,12 +91,12 @@ export function Hero() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-slate-900 rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-slate-900 dark:border-white rounded-full"
         />
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-slate-900 rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-slate-900 dark:border-white rounded-full"
         />
       </div>
 
@@ -116,10 +116,10 @@ export function Hero() {
                   I'm Jayashan Manodya
                   <span className="inline-block w-[4px] h-[0.8em] ml-1 align-middle" />
                 </h1>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.1] col-start-1 row-start-1">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white leading-[1.1] col-start-1 row-start-1">
                   I'm{" "}
                   <span className="text-[#6366f1]">{text.substring(0, 8)}</span>
-                  <span className="text-slate-900">{text.substring(8)}</span>
+                  <span className="text-slate-900 dark:text-white">{text.substring(8)}</span>
                   <motion.span
                     animate={{ opacity: [0, 1, 0] }}
                     transition={{
@@ -136,7 +136,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg text-slate-600 max-w-lg leading-relaxed"
+                className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
               >
                 I specialize in creating beautiful, functional, and user-centered digital experiences. Based in Sri Lanka, I'm passionate about building things that make a difference.
               </motion.p>
@@ -150,7 +150,7 @@ export function Hero() {
             >
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-10 py-4 bg-black text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95"
+                className="px-10 py-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 About
               </button>
@@ -195,7 +195,7 @@ export function Hero() {
                 whileHover={{ scale: 1.1, rotate: 45 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white group"
+                className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white dark:bg-[#030014] rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white dark:border-[#030014] group"
               >
                 <div className="w-full h-full bg-[#6366f1] rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-95">
                   <ArrowUpRight size={40} className="md:w-12 md:h-12" />

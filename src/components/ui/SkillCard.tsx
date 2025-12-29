@@ -22,13 +22,13 @@ export function SkillCard({
       viewport={{ once: true }}
       transition={{ delay, duration: 0.5 }}
       whileHover={{ y: -5 }}
-      className="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 group"
+      className="p-8 rounded-[32px] bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 group"
     >
       <div className="flex items-center gap-4 mb-8">
-        <div className="p-4 rounded-2xl bg-indigo-50 text-[#6366f1] group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
+        <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 text-[#6366f1] group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
           <Icon size={28} />
         </div>
-        <h3 className="text-2xl font-black text-slate-900 tracking-tight">{title}</h3>
+        <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">{title}</h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -37,7 +37,7 @@ export function SkillCard({
           return (
             <span
               key={index}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-600 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#6366f1]/5 hover:border-[#6366f1]/20 hover:text-[#6366f1] transition-all duration-200"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800 hover:bg-[#6366f1]/5 hover:border-[#6366f1]/20 hover:text-[#6366f1] transition-all duration-200"
             >
               {iconData && (
                 <svg
