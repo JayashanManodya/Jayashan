@@ -31,7 +31,7 @@ export function TimelineItem({
 
       <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
-          <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight leading-tight">{degree}</h3>
+          <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight">{degree}</h3>
           <span className="flex items-center text-sm font-bold text-[#6366f1] bg-indigo-50 px-4 py-2 rounded-full w-fit">
             <Calendar className="w-4 h-4 mr-2" />
             {period}
@@ -39,7 +39,7 @@ export function TimelineItem({
         </div>
 
         <div className="flex flex-wrap items-center gap-6 mb-6">
-          <span className="text-lg font-black text-slate-600 uppercase tracking-wider">
+          <span className="text-lg font-black text-slate-600 tracking-wider">
             {institution}
           </span>
           <span className="flex items-center text-slate-400 font-bold text-sm">

@@ -4,19 +4,29 @@ import { Section } from '../ui/Section';
 
 const certifications = [
     {
-        name: "Google UX Design Professional Certificate",
-        issuer: "Coursera / Google",
-        year: "2023"
+        name: "AI/ML Engineer - Stage 1",
+        issuer: "SLIIT",
+        year: "2025"
     },
     {
-        name: "Complete Web Design Course",
-        issuer: "Udemy",
-        year: "2022"
+        name: "Programming in Python - 1",
+        issuer: "CODL - University of Moratuwa",
+        year: "2025"
     },
     {
-        name: "UI/UX Specialization",
-        issuer: "Interaction Design Foundation",
-        year: "2022"
+        name: "Web Development - 1",
+        issuer: "CODL - University of Moratuwa",
+        year: "2025"
+    },
+    {
+        name: "Fundamentals of Digital Marketing",
+        issuer: "Google - Digital Garage",
+        year: "2024"
+    },
+    {
+        name: "Arduino CodeCamp Workshop",
+        issuer: "CODECAMP",
+        year: "2024"
     }
 ];
 
@@ -24,7 +34,7 @@ export function Certifications() {
     return (
         <Section id="certifications" className="bg-slate-50">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Certifications</h2>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter">Certifications</h2>
                 <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
             </div>
 
@@ -42,11 +52,11 @@ export function Certifications() {
                         <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#6366f1] group-hover:text-white transition-all duration-300">
                             <Award size={32} className="text-[#6366f1] group-hover:text-white" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-2 leading-none uppercase tracking-tight group-hover:text-[#6366f1] transition-colors">{cert.name}</h3>
-                        <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mb-6">{cert.issuer}</p>
+                        <h3 className="text-2xl font-black text-slate-900 mb-2 leading-none tracking-tight group-hover:text-[#6366f1] transition-colors">{cert.name}</h3>
+                        <p className="text-slate-500 font-bold tracking-widest text-sm mb-6">{cert.issuer}</p>
 
                         <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
-                            <span className="text-xs font-black text-slate-300 uppercase tracking-[0.2em]">{cert.year}</span>
+                            <span className="text-xs font-black text-slate-300 tracking-[0.2em]">{cert.year}</span>
                             <button className="text-[#6366f1] p-3 rounded-full hover:bg-indigo-50 transition-all">
                                 <ExternalLink size={20} />
                             </button>

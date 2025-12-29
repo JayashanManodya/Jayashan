@@ -60,8 +60,8 @@ export function Navbar() {
         </div>
 
         {/* Logo / Brand - Centered */}
-        <div className="flex-shrink-0 bg-white text-black w-10 h-10 rounded-full flex items-center justify-center font-black text-xs shadow-md mx-4">
-          JM
+        <div className="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-md mx-4 bg-white">
+          <img src="/j.png" alt="Logo" className="w-full h-full object-cover" />
         </div>
 
         {/* Nav Links - Right side (Desktop) */}
