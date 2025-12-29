@@ -204,8 +204,8 @@ export function Hero() {
 
               {/* Social Links Side Strip */}
               <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
-                <span className="text-xs font-semibold text-slate-400 rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
-                  Follow me on
+                <span className="text-xs font-semibold text-[#6366f1] rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
+                  #jayashan
                 </span>
                 <div className="w-px h-12 bg-slate-200" />
                 <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
