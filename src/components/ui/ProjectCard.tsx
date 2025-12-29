@@ -42,14 +42,14 @@ export function ProjectCard({
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-[#6366f1]/10 to-indigo-500/10 flex items-center justify-center">
-            <span className="text-slate-300 font-black tracking-tighter">No Preview</span>
+            <span className="text-slate-300 font-bold tracking-tighter">No Preview</span>
           </div>
         )}
 
         {/* Category Overlay */}
         <div className="absolute top-6 left-6 z-20 flex flex-wrap gap-2">
           {(Array.isArray(category) ? category : [category]).map(cat => (
-            <span key={cat} className="px-4 py-2 text-xs font-black tracking-wider bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50 dark:border-slate-700/50">
+            <span key={cat} className="px-4 py-2 text-xs font-bold tracking-wider bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50 dark:border-slate-700/50">
               {cat}
             </span>
           ))}
@@ -57,17 +57,17 @@ export function ProjectCard({
       </div>
 
       <div className="p-8 flex flex-col flex-1">
-        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-[#6366f1] transition-colors leading-none">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-[#6366f1] transition-colors leading-none">
           {title}
         </h3>
 
-        <p className="text-slate-500 dark:text-slate-400 mb-6 font-medium line-clamp-3 leading-relaxed">
+        <p className="text-slate-500 dark:text-slate-400 mb-6 font-normal line-clamp-3 leading-relaxed">
           {description}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-8 mt-auto">
           {tags.map(tag => (
-            <span key={tag} className="text-xs font-bold text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-800">
+            <span key={tag} className="text-xs font-semibold text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-800">
               #{tag}
             </span>
           ))}

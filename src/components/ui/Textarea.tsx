@@ -14,7 +14,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({
   return (
     <div className="w-full">
       {label && (
-        <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 tracking-wider mb-2 ml-1">
+        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 tracking-widest mb-2 ml-1 uppercase">
           {label}
         </label>
       )}
@@ -31,7 +31,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({
         `}
         {...props}
       />
-      {error && <p className="mt-2 text-sm font-bold text-red-500 ml-2">{error}</p>}
+      {error && <p className="mt-2 text-sm font-semibold text-red-500 ml-2">{error}</p>}
     </div>
   );
 });
