@@ -1,147 +1,218 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowRight, Download } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export function Hero() {
-  const containerRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const yText = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const yImage = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const fullText = "Jayashan Manodya";
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const isComplete = !isDeleting && text === fullText;
+      const isDoneDeleting = isDeleting && text === '';
+
+      if (isComplete) {
+        setTimeout(() => setIsDeleting(true), 2000);
+        return;
+      }
+
+      if (isDoneDeleting) {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setTypingSpeed(150);
+        return;
+      }
+
+      const nextText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(nextText);
+      setTypingSpeed(isDeleting ? 75 : 150);
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section
-      ref={containerRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-900 dark:bg-slate-900 light:bg-slate-50"
+      className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white"
     >
-      {/* Modern Background Grid */}
-      <motion.div
-        style={{ y: bgY }}
-        className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] light:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"
-      />
-
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-500/30 rounded-full blur-[120px] animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/30 rounded-full blur-[120px] animate-pulse" style={{
-        animationDelay: '1s'
-      }} />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-          {/* Left Side - Modern Text Layout */}
-          <motion.div
-            style={{ y: yText }}
-            initial={{
-              opacity: 0,
-              x: -50
-            }}
-            animate={{
-              opacity: 1,
-              x: 0
-            }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8
-            }}
-            className="flex-1 space-y-8"
-          >
-            {/* Name with larger typography */}
-            <motion.h1 initial={{
-              opacity: 0,
-              y: 20
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: 0.5
-            }} className="text-7xl md:text-10xl lg:text-9xl font-black text-white dark:text-white light:text-slate-900 leading-none tracking-tight">
-              Jayashan
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
-                Manodya
-              </span>
-            </motion.h1>
-
-            {/* Modern CTA Buttons */}
-            <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: 0.8
-            }} className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" onClick={() => document.getElementById('projects')?.scrollIntoView({
-                behavior: 'smooth'
-              })} className="group">
-                View Projects
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-
-              <Button variant="outline" size="lg">
-                <Download className="mr-2 w-5 h-5" />
-                Resume
-              </Button>
-            </motion.div>
-
-
-          </motion.div>
-
-          {/* Right Side - Photo */}
-          <motion.div
-            style={{ y: yImage, scale: scaleImage }}
-            initial={{
-              opacity: 0,
-              scale: 0.9
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1
-            }}
-            transition={{
-              duration: 0.8,
-              ease: 'easeOut'
-            }}
-            className="relative flex-shrink-0"
-          >
-            {/* Photo without any frame or container */}
-            <img src="/h.png" alt="Jayashan Manodya" className="w-96 h-96 md:w-[620px] md:h-[620px] object-contain" />
-          </motion.div>
-        </div>
-
-        {/* Modern Scroll Indicator */}
+      {/* Background Animated Blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          style={{ opacity }}
-          initial={{
-            opacity: 0
-          }}
           animate={{
-            opacity: 1
+            x: [0, 40, 0],
+            y: [0, 60, 0],
+            scale: [1, 1.1, 1],
           }}
           transition={{
-            delay: 1.2
-          }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs text-gray-500 dark:text-gray-500 light:text-slate-600 uppercase tracking-wider">
-            Scroll
-          </span>
-          <motion.div animate={{
-            y: [0, 8, 0]
-          }} transition={{
+            duration: 20,
             repeat: Infinity,
-            duration: 1.5
-          }} className="w-px h-12 bg-gradient-to-b from-cyan-500 to-transparent" />
-        </motion.div>
+            ease: "linear"
+          }}
+          className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-purple-50 rounded-full blur-[100px] opacity-60"
+        />
+        <motion.div
+          animate={{
+            x: [0, -50, 0],
+            y: [0, 40, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-[20%] -right-[10%] w-[35%] h-[35%] bg-indigo-50 rounded-full blur-[100px] opacity-40"
+        />
+        <motion.div
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute -bottom-[5%] left-[20%] w-[30%] h-[30%] bg-blue-50 rounded-full blur-[80px] opacity-50"
+        />
+      </div>
+
+      {/* Rotating Background Strokes */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-slate-900 rounded-full"
+        />
+        <motion.div
+          animate={{ rotate: -360 }}
+          transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-slate-900 rounded-full"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+
+          {/* Left Side - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex-1 space-y-8 max-w-2xl"
+          >
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.1]">
+                I'm{" "}
+                {text.split("").map((char, i) => (
+                  <span
+                    key={i}
+                    className={i < 8 ? "text-[#6366f1]" : "text-slate-900"}
+                  >
+                    {char}
+                  </span>
+                ))}
+                <motion.span
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{
+                    duration: 0.8,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="inline-block w-[4px] h-[0.8em] bg-[#6366f1] ml-1 align-middle"
+                />
+              </h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-lg text-slate-600 max-w-lg leading-relaxed"
+              >
+                I specialize in creating beautiful, functional, and user-centered digital experiences. Based in Sri Lanka, I'm passionate about building things that make a difference.
+              </motion.p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-wrap gap-4"
+            >
+              <button
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-10 py-4 bg-black text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95"
+              >
+                About
+              </button>
+              <button
+                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-bold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95"
+              >
+                Download CV
+              </button>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Side - Image Container */}
+          <div className="relative flex-shrink-0">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="relative"
+            >
+              {/* Main Purple Container */}
+              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-[#6366f1] rounded-[60px] overflow-hidden relative shadow-2xl">
+                <img
+                  src="/h.png"
+                  alt="Jayashan Manodya"
+                  className="w-full h-full object-cover grayscale brightness-110 contrast-110 mix-blend-luminosity hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+
+              {/* Decorative Strokes */}
+              <div className="absolute -top-10 -right-10 w-20 h-20 opacity-20 pointer-events-none">
+                <svg viewBox="0 0 100 100" fill="none" stroke="black" strokeWidth="2">
+                  <path d="M10 50 Q 30 10 50 50 T 90 50" />
+                  <path d="M10 70 Q 30 30 50 70 T 90 70" />
+                </svg>
+              </div>
+
+              {/* Arrow Button Overlay */}
+              <motion.button
+                whileHover={{ scale: 1.1, rotate: 45 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white group"
+              >
+                <div className="w-full h-full bg-[#6366f1] rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-95">
+                  <ArrowUpRight size={40} className="md:w-12 md:h-12" />
+                </div>
+              </motion.button>
+
+              {/* Social Links Side Strip */}
+              <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
+                <span className="text-xs font-bold text-slate-400 rotate-90 whitespace-nowrap mb-8 uppercase tracking-widest">
+                  Follow me on
+                </span>
+                <div className="w-px h-12 bg-slate-200" />
+                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
