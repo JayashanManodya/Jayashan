@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
+import { techIconsData } from '../../data/techIcons';
 
 interface SkillCardProps {
   title: string;
@@ -31,14 +32,26 @@ export function SkillCard({
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className="px-4 py-2 text-sm font-bold text-slate-600 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#6366f1]/5 hover:border-[#6366f1]/20 hover:text-[#6366f1] transition-all duration-200"
-          >
-            {skill}
-          </span>
-        ))}
+        {skills.map((skill, index) => {
+          const iconData = techIconsData[skill];
+          return (
+            <span
+              key={index}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-600 bg-slate-50 rounded-xl border border-slate-100 hover:bg-[#6366f1]/5 hover:border-[#6366f1]/20 hover:text-[#6366f1] transition-all duration-200"
+            >
+              {iconData && (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill={iconData.color}
+                  className="w-4 h-4"
+                >
+                  <path d={iconData.path} />
+                </svg>
+              )}
+              {skill}
+            </span>
+          );
+        })}
       </div>
     </motion.div>
   );
