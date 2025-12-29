@@ -42,31 +42,9 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Nav Links - Left side (Desktop) */}
+        {/* Nav Links - Desktop */}
         <div className="hidden md:flex items-center gap-1">
-          {navItems.slice(0, 4).map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href, item.name)}
-              className={`text-[13px] xl:text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full whitespace-nowrap ${activeTab === item.name
-                ? 'bg-white text-[#6366f1]'
-                : 'text-white hover:text-white/80'
-                }`}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-
-        {/* Logo / Brand - Centered */}
-        <div className="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-md mx-4 bg-white">
-          <img src="/j.png" alt="Logo" className="w-full h-full object-cover" />
-        </div>
-
-        {/* Nav Links - Right side (Desktop) */}
-        <div className="hidden md:flex items-center gap-1">
-          {navItems.slice(4).map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
