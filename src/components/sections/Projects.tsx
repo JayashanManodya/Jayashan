@@ -15,7 +15,7 @@ const allProjects = [{
     'PostCSS'
   ],
   category: 'Web',
-  image: '/projectPhotos/posterv1.png',
+  image: '/projectPhotos/jayashan.jpeg',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
