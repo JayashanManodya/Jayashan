@@ -36,4 +36,5 @@ export const techIconsData: Record<string, { color: string; path: string }> = {
     'Canva': { color: '#00C4CC', path: "M12 2L2 12l10 10l10-10L12 2z" }, // Simplified Diamond
     'Illustrator': { color: '#FF9A00', path: "M2 2h20v20H2z M9 10H7v5h2v-5z" }, // Simplified Ai
     'Premiere Pro': { color: '#9999FF', path: "M2 2h20v20H2z M9 10H7v5h2v-5z" }, // Simplified Pr
+    'IntelliJ IDEA': { color: '#000000', path: "M0 0h24v24H0V0zm4.5 4.5v15h15v-15h-15zM11 7v7h2V7h-2zm-3 2v5h2V9H8zm6 0v5h2V9h-2z" }, // Simplified IJ
 };
