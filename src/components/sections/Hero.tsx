@@ -116,7 +116,7 @@ export function Hero() {
                   I'm Jayashan Manodya
                   <span className="inline-block w-[4px] h-[0.8em] ml-1 align-middle" />
                 </h1>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white leading-[1.1] col-start-1 row-start-1">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white leading-[1.1] col-start-1 row-start-1 tracking-tight">
                   I'm{" "}
                   <span className="text-[#6366f1]">{text.substring(0, 8)}</span>
                   <span className="text-slate-900 dark:text-white">{text.substring(8)}</span>
@@ -150,7 +150,7 @@ export function Hero() {
             >
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-10 py-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-all shadow-lg hover:shadow-xl active:scale-95"
+                className="px-10 py-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl font-semibold hover:bg-slate-800 dark:hover:bg-slate-200 transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 About
               </button>
@@ -158,7 +158,7 @@ export function Hero() {
                 href="https://drive.google.com/file/d/1JZQYZ-Puf2LWtscAlWrNKw3EuausQ1B-/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-bold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
+                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-semibold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
               >
                 Download CV
               </a>
@@ -204,7 +204,7 @@ export function Hero() {
 
               {/* Social Links Side Strip */}
               <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
-                <span className="text-xs font-bold text-slate-400 rotate-90 whitespace-nowrap mb-8 tracking-widest">
+                <span className="text-xs font-semibold text-slate-400 rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
                   Follow me on
                 </span>
                 <div className="w-px h-12 bg-slate-200" />

@@ -86,7 +86,7 @@ export function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href, item.name)}
-                  className={`text-center text-lg font-bold py-2 ${activeTab === item.name ? 'bg-white text-[#6366f1] rounded-full' : 'text-white'
+                  className={`text-center text-lg font-semibold py-2 ${activeTab === item.name ? 'bg-white text-[#6366f1] rounded-full' : 'text-white'
                     }`}
                 >
                   {item.name}

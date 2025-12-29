@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <Section id="contact" className="bg-white dark:bg-[#030014] transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter">Let's Connect</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Let's Connect</h2>
         <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
       </div>
 
@@ -26,7 +26,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-slate-600 dark:text-slate-400 mb-12 leading-relaxed text-lg font-medium">
+          <p className="text-slate-600 dark:text-slate-400 mb-12 leading-relaxed text-lg font-normal">
             I'm currently looking for internship opportunities in AI/ML and Full
             Stack Development. Whether you have a question, a project idea, or
             just want to say hi, I'll try my best to get back to you!
@@ -38,13 +38,13 @@ export function Contact() {
                 <Mail className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-xs font-black tracking-widest text-slate-400 dark:text-slate-500 mb-1">Email Me</p>
-                <p className="text-xl font-black text-slate-900 dark:text-white tracking-tight group-hover:text-[#6366f1] transition-colors">kpjmp28@gmail.com</p>
+                <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-1 uppercase">Email Me</p>
+                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-[#6366f1] transition-colors">kpjmp28@gmail.com</p>
               </div>
             </a>
 
             <div className="pt-8">
-              <p className="text-xs font-black tracking-widest text-slate-400 dark:text-slate-500 mb-6 ml-1">
+              <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-6 ml-1 uppercase">
                 Social Media
               </p>
               <div className="flex gap-4">
@@ -79,7 +79,7 @@ export function Contact() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full bg-[#6366f1] hover:bg-[#5850ec] text-white py-6 rounded-[24px] text-lg font-black tracking-widest shadow-lg shadow-[#6366f1]/20 transition-all duration-300"
+            className="w-full bg-[#6366f1] hover:bg-[#5850ec] text-white py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-[#6366f1]/20 transition-all duration-300"
           >
             Send Message
           </motion.button>
@@ -87,7 +87,7 @@ export function Contact() {
       </div>
 
       <footer className="mt-32 pt-12 border-t border-slate-100 dark:border-slate-800 text-center">
-        <p className="text-slate-400 dark:text-slate-500 font-bold tracking-widest text-xs">© 2025 Jayashan Manodya. All rights reserved.</p>
+        <p className="text-slate-400 dark:text-slate-500 font-semibold tracking-widest text-xs uppercase">© 2025 Jayashan Manodya. All rights reserved.</p>
       </footer>
     </Section>
   );
