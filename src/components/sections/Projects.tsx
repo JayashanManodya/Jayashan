@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
+
 const allProjects = [{
   title: 'RailLink – Next-Gen Train Scheduling & Booking System',
   description: 'An AI-driven railway management platform with an intelligent chatbot at its core, built using Spring Boot and Thymeleaf to modernize train scheduling, passenger booking, automated e-ticketing via n8n, and end-to-end administrative operations.',
@@ -71,9 +72,11 @@ const allProjects = [{
   image: '/projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
+
 export function Projects() {
   const [filter, setFilter] = useState('All');
   const categories = ['All', 'Web', 'AI/ML', 'Computer Vision', 'IoT'];
+
   const filteredProjects = filter === 'All'
     ? allProjects
     : allProjects.filter(p =>
@@ -81,21 +84,34 @@ export function Projects() {
         ? p.category.includes(filter)
         : p.category === filter
     );
-  return <Section id="projects" className="bg-black/20">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-        Featured <span className="text-cyan-400">Projects</span>
-      </h2>
 
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {categories.map(cat => <button key={cat} onClick={() => setFilter(cat)} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat ? 'bg-cyan-500 text-black shadow-[0_0_15px_rgba(0,217,255,0.4)]' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'}`}>
-          {cat}
-        </button>)}
+  return (
+    <Section id="projects" className="bg-slate-50">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic uppercase tracking-tighter">Featured Projects</h2>
+        <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
+
+        <div className="flex flex-wrap justify-center gap-3 mt-12">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`px-8 py-3 rounded-full text-sm font-black italic uppercase tracking-wider transition-all duration-300 shadow-sm ${filter === cat
+                ? 'bg-[#6366f1] text-white shadow-[#6366f1]/20 shadow-lg scale-105'
+                : 'bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900'
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {filteredProjects.map((project, index) => <ProjectCard key={project.title} {...project} index={index} />)}
-    </div>
-  </Section>;
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {filteredProjects.map((project, index) => (
+          <ProjectCard key={project.title} {...project} index={index} />
+        ))}
+      </div>
+    </Section>
+  );
 }

@@ -170,12 +170,12 @@ export function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
-              {/* Main Purple Container */}
-              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-[#6366f1] rounded-[60px] overflow-hidden relative shadow-2xl">
+              {/* Main Container */}
+              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-slate-50 rounded-[60px] overflow-hidden relative shadow-2xl">
                 <img
                   src="/h.png"
                   alt="Jayashan Manodya"
-                  className="w-full h-full object-cover grayscale brightness-110 contrast-110 mix-blend-luminosity hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
               </div>
 

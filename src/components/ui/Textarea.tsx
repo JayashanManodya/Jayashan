@@ -11,22 +11,29 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({
   error,
   ...props
 }, ref) => {
-  return <div className="w-full">
-    {label && <label className="block text-sm font-medium text-gray-300 mb-2">
-      {label}
-    </label>}
-    <textarea ref={ref} className={`
-            w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg 
-            text-white placeholder-slate-500
-            focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500
-            transition-all duration-300
-            disabled:opacity-50 disabled:cursor-not-allowed
-            glass min-h-[120px]
-            ${error ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}
-            ${className}
-          `} {...props} />
-    {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
-  </div>;
+  return (
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-bold text-slate-700 italic uppercase tracking-wider mb-2 ml-1">
+          {label}
+        </label>
+      )}
+      <textarea
+        ref={ref}
+        className={`
+          w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-[24px]
+          text-slate-900 placeholder-slate-400 font-medium min-h-[150px]
+          focus:outline-none focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/5
+          transition-all duration-300
+          disabled:opacity-50 disabled:cursor-not-allowed
+          ${error ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}
+          ${className}
+        `}
+        {...props}
+      />
+      {error && <p className="mt-2 text-sm font-bold text-red-500 ml-2">{error}</p>}
+    </div>
+  );
 });
 
 Textarea.displayName = 'Textarea';
