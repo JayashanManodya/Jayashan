@@ -16,11 +16,11 @@ export function Portfolio() {
     <main>
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Projects />
+      <Experience />
       <Education />
       <Certifications />
-      <Projects />
       <Contact />
     </main>
   </div>;
