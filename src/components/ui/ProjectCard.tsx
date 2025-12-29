@@ -42,14 +42,14 @@ export function ProjectCard({
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-[#6366f1]/10 to-indigo-500/10 flex items-center justify-center">
-            <span className="text-slate-300 font-black italic uppercase tracking-tighter">No Preview</span>
+            <span className="text-slate-300 font-black uppercase tracking-tighter">No Preview</span>
           </div>
         )}
 
         {/* Category Overlay */}
         <div className="absolute top-6 left-6 z-20 flex flex-wrap gap-2">
           {(Array.isArray(category) ? category : [category]).map(cat => (
-            <span key={cat} className="px-4 py-2 text-xs font-black italic uppercase tracking-wider bg-white/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50">
+            <span key={cat} className="px-4 py-2 text-xs font-black uppercase tracking-wider bg-white/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50">
               {cat}
             </span>
           ))}
@@ -57,7 +57,7 @@ export function ProjectCard({
       </div>
 
       <div className="p-8 flex flex-col flex-1">
-        <h3 className="text-2xl font-black text-slate-900 mb-3 italic uppercase tracking-tight group-hover:text-[#6366f1] transition-colors leading-none">
+        <h3 className="text-2xl font-black text-slate-900 mb-3 uppercase tracking-tight group-hover:text-[#6366f1] transition-colors leading-none">
           {title}
         </h3>
 
@@ -67,7 +67,7 @@ export function ProjectCard({
 
         <div className="flex flex-wrap gap-2 mb-8 mt-auto">
           {tags.map(tag => (
-            <span key={tag} className="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 italic">
+            <span key={tag} className="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
               #{tag}
             </span>
           ))}
