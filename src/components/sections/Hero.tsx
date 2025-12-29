@@ -138,7 +138,7 @@ export function Hero() {
                 transition={{ delay: 0.4 }}
                 className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
               >
-                I specialize in creating beautiful, functional, and user-centered digital experiences. Based in Sri Lanka, I'm passionate about building things that make a difference.
+                Harnessing the power of artificial intelligence and cutting-edge software engineering, we create intelligent solutions that drive innovation, automate processes, and solve real-world challenges with efficiency and precision.
               </motion.p>
             </div>
 
