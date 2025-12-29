@@ -3,6 +3,21 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'Professional Portfolio Website',
+  description: 'A cutting-edge, responsive portfolio website featuring modern development workflows, an intelligent dark/light mode system, and premium animations. Built with a focus on performance and minimal design aesthetics.',
+  tags: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Framer Motion',
+    'Lucide Icons',
+    'Responsive Design'
+  ],
+  category: 'Web',
+  image: '/projectPhotos/poster.png',
+  githubUrl: 'https://github.com/JayashanManodya/Jayashan',
+},
+{
   title: 'RailLink – Next-Gen Train Scheduling & Booking System',
   description: 'An AI-driven railway management platform with an intelligent chatbot at its core, built using Spring Boot and Thymeleaf to modernize train scheduling, passenger booking, automated e-ticketing via n8n, and end-to-end administrative operations.',
   tags: [
