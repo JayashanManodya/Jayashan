@@ -3,18 +3,19 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
-  title: 'Professional Portfolio Website',
+  title: 'Portfolio Website',
   description: 'A cutting-edge, responsive portfolio website featuring modern development workflows, an intelligent dark/light mode system, and premium animations. Built with a focus on performance and minimal design aesthetics.',
   tags: [
     'React',
     'TypeScript',
     'Tailwind CSS',
     'Framer Motion',
-    'Lucide Icons',
-    'Responsive Design'
+    'Lucide React',
+    'Vite',
+    'PostCSS'
   ],
   category: 'Web',
-  image: '/projectPhotos/poster.png',
+  image: '/projectPhotos/posterv1.png',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
