@@ -32,11 +32,11 @@
   }
 
   body {
-    @apply bg-slate-900 text-slate-50;
+    @apply bg-slate-900 text-slate-50 font-outfit;
   }
 
   .light body {
-    @apply bg-slate-50 text-slate-900;
+    @apply bg-slate-50 text-slate-900 font-outfit;
   }
 }
 

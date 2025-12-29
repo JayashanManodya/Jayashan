@@ -37,13 +37,11 @@ export function About() {
           className="space-y-6 text-slate-600 leading-relaxed text-lg"
         >
           <p className="font-medium text-slate-900">
-            I am an undergraduate student at the Sri Lanka Institute of Information Technology (SLIIT), specializing in Artificial Intelligence.
-          </p>
+            I am Jayashan Manodya, an undergraduate student at the Sri Lanka Institute of Information Technology (SLIIT) specializing in Artificial Intelligence. Originally from Ratnapura, Sri Lanka. I am driven by a passion for solving complex problems through technology.          </p>
           <p>
-            My academic journey has helped me build a solid foundation in programming, data structures, and software engineering. I enjoy working on hands-on projects, experimenting with emerging tools, and applying theoretical knowledge to practical applications.
-          </p>
+            My academic journey has helped me build a solid foundation in programming, data structures, and software engineering. I particularly enjoy hands-on projects where I can experiment with emerging AI tools and bridge the gap between theoretical knowledge and practical application.          </p>
           <p>
-            Beyond academics, I am motivated, curious, and always eager to improve my skills. I value teamwork, creativity, and problem-solving, and I aim to grow into a skilled IT professional.
+            Beyond my studies, I am a curious and motivated individual committed to continuous learning. I value teamwork and creativity, and I am eager to leverage my skills to grow into a versatile IT professional."
           </p>
         </motion.div>
 
