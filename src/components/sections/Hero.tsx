@@ -138,8 +138,7 @@ export function Hero() {
                 transition={{ delay: 0.4 }}
                 className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
               >
-                Harnessing the power of modern technology and cutting-edge software engineering, we create intelligent solutions that drive innovation, automate processes, and solve real-world challenges with efficiency and precision.
-              </motion.p>
+                Passionate about building intelligent, reliable software solutions using modern technologies. I enjoy turning complex problems into clean, efficient systems by blending logical thinking, creativity, and continuous experimentation with emerging tools.              </motion.p>
             </div>
 
             <motion.div
