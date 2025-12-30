@@ -81,7 +81,7 @@ export function ProjectCard({
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="outline" className="border-[#6366f1]/20 dark:border-[#6366f1]/30 text-[#6366f1] hover:bg-[#6366f1] hover:text-white rounded-full px-6 transition-all duration-300" onClick={() => window.open(githubUrl, '_blank')}>
+            <Button size="sm" variant="outline" className="border-[#6366f1]/20 dark:border-[#6366f1]/30 text-[#6366f1] hover:!bg-[#4f46e5] hover:!border-[#4f46e5] hover:text-white rounded-full px-6 transition-all duration-300" onClick={() => window.open(githubUrl, '_blank')}>
               <Github className="w-4 h-4 mr-2" />
               Code
             </Button>
