@@ -6,27 +6,32 @@ const certifications = [
     {
         name: "AI/ML Engineer - Stage 1",
         issuer: "SLIIT",
-        year: "2025"
+        year: "2025",
+        link: "https://drive.google.com/file/d/1g-x9ne8bCMCBhegS9pWykP4KZiTWGSDZ/view?usp=sharing"
     },
     {
         name: "Programming in Python - 1",
         issuer: "CODL - University of Moratuwa",
-        year: "2025"
+        year: "2025",
+        link: "https://drive.google.com/file/d/13nM0wpkaVtN3hZSbMlvmKrv62qJW_SZJ/view?usp=sharing"
     },
     {
         name: "Web Development - 1",
         issuer: "CODL - University of Moratuwa",
-        year: "2025"
+        year: "2025",
+        link: "https://drive.google.com/file/d/14irbPMYuKXrJ3WnKt3GYj5yCkN86mku2/view?usp=sharing"
     },
     {
         name: "Fundamentals of Digital Marketing",
         issuer: "Google - Digital Garage",
-        year: "2024"
+        year: "2024",
+        link: "https://drive.google.com/file/d/1ZvcEdlpWjspez9VKC9UpODrseOBKFUUP/view?usp=sharing"
     },
     {
         name: "Arduino CodeCamp Workshop",
         issuer: "CODECAMP",
-        year: "2024"
+        year: "2024",
+        link: "https://drive.google.com/file/d/10y6OnhET-q0XGHTemL_PedWBf8yclfyB/view?usp=sharing"
     }
 ];
 
@@ -57,9 +62,14 @@ export function Certifications() {
 
                         <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
                             <span className="text-xs font-semibold text-slate-300 dark:text-slate-500 tracking-[0.2em]">{cert.year}</span>
-                            <button className="text-[#6366f1] p-3 rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all">
+                            <a
+                                href={cert.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#6366f1] p-3 rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all"
+                            >
                                 <ExternalLink size={20} />
-                            </button>
+                            </a>
                         </div>
                     </motion.div>
                 ))}

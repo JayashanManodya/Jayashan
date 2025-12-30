@@ -22,7 +22,7 @@ export function Skills() {
   }, {
     title: 'Tools',
     icon: Terminal,
-    skills: ['Git', 'Jupyter', 'VS Code', 'IntelliJ IDEA', 'Hugging Face']
+    skills: ['Git', 'Vercel', 'Jupyter', 'VS Code', 'IntelliJ IDEA', 'Hugging Face']
   }];
 
   return (

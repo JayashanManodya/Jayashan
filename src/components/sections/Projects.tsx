@@ -4,7 +4,7 @@ import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
   title: 'Portfolio Website',
-  description: 'A cutting-edge, responsive portfolio website featuring modern development workflows, an intelligent dark/light mode system, and premium animations. Built with a focus on performance and minimal design aesthetics.',
+  description: 'Developed a modern, performance-focused portfolio website using React + TypeScript, featuring a dark/light adaptive theme, smooth Framer Motion animations, and a mobile-first responsive architecture.',
   tags: [
     'React',
     'TypeScript',
@@ -68,7 +68,7 @@ const allProjects = [{
   ],
   category: 'Web',
   image: 'projectPhotos/InkSpire-BookStore.jpg',
-  githubUrl: '#',
+  githubUrl: 'https://github.com/JayashanManodya/Inkspire_Bookstore',
 },
 {
   title: 'Automated Room Comfort Control System',
@@ -84,7 +84,7 @@ const allProjects = [{
   description: 'My first personal website built with HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
   category: 'Web',
-  githubUrl: '#',
+  githubUrl: 'https://github.com/JayashanManodya/Portfolio',
   image: 'projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
