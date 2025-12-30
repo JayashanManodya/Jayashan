@@ -75,7 +75,7 @@ export function ProjectCard({
 
         <div className="flex gap-4">
           {demoUrl && (
-            <Button size="sm" className="bg-[#6366f1] hover:bg-indigo-700 text-white rounded-full px-6" onClick={() => window.open(demoUrl, '_blank')}>
+            <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 transition-colors shadow-lg shadow-purple-500/20" onClick={() => window.open(demoUrl, '_blank')}>
               <ExternalLink className="w-4 h-4 mr-2" />
               Demo
             </Button>
