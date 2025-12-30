@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -17,7 +17,29 @@ const navItems = [
 export function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showThemeTooltip, setShowThemeTooltip] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowThemeTooltip(true);
+    }, 1500);
+
+    // Hide tooltip after 8 seconds anyway if not clicked
+    const hideTimer = setTimeout(() => {
+      setShowThemeTooltip(false);
+    }, 8000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  const handleToggleTheme = () => {
+    toggleTheme();
+    setShowThemeTooltip(false);
+  };
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
     e.preventDefault();
@@ -62,13 +84,48 @@ export function Navbar() {
         </div>
 
         {/* Theme Toggle Button */}
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300"
-          aria-label="Toggle theme"
-        >
-          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-        </button>
+        <div className="relative">
+          <button
+            onClick={handleToggleTheme}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          <AnimatePresence>
+            {showThemeTooltip && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
+                  boxShadow: [
+                    "0 0 10px rgba(99,102,241,0.2)",
+                    "0 0 25px rgba(99,102,241,0.5)",
+                    "0 0 10px rgba(99,102,241,0.2)"
+                  ]
+                }}
+                transition={{
+                  boxShadow: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                exit={{ opacity: 0, scale: 0.8, y: 10 }}
+                className="absolute top-12 right-0 bg-white text-[#6366f1] text-[12px] font-bold py-2 px-3 rounded-xl whitespace-nowrap border border-white/20 z-50 pointer-events-none"
+              >
+                <div className="flex items-center gap-1.5">
+                  Try {theme === 'dark' ? 'Light' : 'Dark'} Mode!
+                </div>
+                {/* Arrow */}
+                <div className="absolute -top-1 right-3.5 w-2 h-2 bg-white rotate-45" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
       {/* Mobile Nav Overlay */}
