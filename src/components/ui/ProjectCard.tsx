@@ -49,7 +49,7 @@ export function ProjectCard({
         {/* Category Overlay */}
         <div className="absolute top-6 left-6 z-20 flex flex-wrap gap-2">
           {(Array.isArray(category) ? category : [category]).map(cat => (
-            <span key={cat} className="px-4 py-2 text-xs font-bold tracking-wider bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-sm border border-white/50 dark:border-slate-700/50">
+            <span key={cat} className="px-4 py-2 text-xs font-bold tracking-wider bg-white/95 dark:bg-slate-900/90 backdrop-blur-sm text-[#6366f1] rounded-full shadow-md border-2 border-indigo-100 dark:border-indigo-900/30">
               {cat}
             </span>
           ))}
@@ -67,7 +67,7 @@ export function ProjectCard({
 
         <div className="flex flex-wrap gap-2 mb-8 mt-auto">
           {tags.map(tag => (
-            <span key={tag} className="text-xs font-semibold text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800">
+            <span key={tag} className="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border-2 border-slate-200 dark:border-indigo-900/30 transition-colors">
               #{tag}
             </span>
           ))}
