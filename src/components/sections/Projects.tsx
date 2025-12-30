@@ -15,7 +15,7 @@ const allProjects = [{
     'PostCSS'
   ],
   category: 'Web',
-  image: '/projectPhotos/poster.png',
+  image: 'projectPhotos/posterv1.png',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
@@ -33,7 +33,7 @@ const allProjects = [{
     'Full Stack'
   ],
   category: ['Web', 'AI/ML'],
-  image: '/projectPhotos/railLink.png',
+  image: 'projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
 {
@@ -50,7 +50,7 @@ const allProjects = [{
     'OCR'
   ],
   category: 'Computer Vision',
-  image: '/projectPhotos/plateX.jpg',
+  image: 'projectPhotos/plateX.jpg',
   githubUrl: 'https://github.com/JayashanManodya/PlateX',
 }
   , {
@@ -67,7 +67,7 @@ const allProjects = [{
     'File Handling'
   ],
   category: 'Web',
-  image: '/projectPhotos/InkSpire-BookStore.jpg',
+  image: 'projectPhotos/InkSpire-BookStore.jpg',
   githubUrl: '#',
 },
 {
@@ -75,7 +75,7 @@ const allProjects = [{
   description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
   tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
   category: 'IoT',
-  image: '/projectPhotos/Automated-Room-Comfort-Control-System.png',
+  image: 'projectPhotos/Automated-Room-Comfort-Control-System.png',
   githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
 
 },
@@ -85,7 +85,7 @@ const allProjects = [{
   tags: ['HTML', 'CSS', 'JavaScript'],
   category: 'Web',
   githubUrl: '#',
-  image: '/projectPhotos/Portfolio-V1.png',
+  image: 'projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
 

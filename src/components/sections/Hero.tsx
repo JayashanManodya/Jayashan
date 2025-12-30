@@ -176,7 +176,7 @@ export function Hero() {
               {/* Purple Shape Container */}
               <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-[#6366f1] rounded-[60px] overflow-hidden relative shadow-2xl">
                 <img
-                  src="/h.png"
+                  src="h.png"
                   alt="Jayashan Manodya"
                   className="w-full h-full object-cover transition-all duration-700"
                 />
