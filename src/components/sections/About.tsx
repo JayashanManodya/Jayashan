@@ -54,7 +54,7 @@ export function About() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all group"
+              className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all group"
             >
               <item.icon className="w-10 h-10 text-[#6366f1] mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">

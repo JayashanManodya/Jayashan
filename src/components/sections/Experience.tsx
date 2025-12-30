@@ -34,10 +34,10 @@ export function Experience() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="relative pl-10 border-l-4 border-slate-100 group hover:border-[#6366f1] transition-colors pb-12 last:pb-0"
+                        className="relative pl-10 border-l-4 border-slate-200 group hover:border-[#6366f1] transition-colors pb-12 last:pb-0"
                     >
                         <div className="absolute -left-[14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform" />
-                        <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-50 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">{exp.title}</h3>
                                 <span className="text-[#6366f1] font-semibold text-sm bg-indigo-50 dark:bg-indigo-900/20 px-4 py-2 rounded-full tracking-wider">{exp.period}</span>
