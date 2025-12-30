@@ -26,7 +26,7 @@ export function Experience() {
                 <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
             </div>
 
-            <div className="max-w-4xl mx-auto space-y-12">
+            <div className="max-w-4xl mx-auto space-y-0">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
@@ -34,7 +34,7 @@ export function Experience() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="relative pl-10 border-l-4 border-slate-200 group hover:border-[#6366f1] transition-colors pb-12 last:pb-0"
+                        className="relative pl-10 border-l-4 border-slate-200 dark:border-slate-800 group transition-colors pb-16 last:pb-0"
                     >
                         <div className="absolute -left-[14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform" />
                         <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
