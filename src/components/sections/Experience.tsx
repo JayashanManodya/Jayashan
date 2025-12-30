@@ -23,7 +23,7 @@ export function Experience() {
         <Section id="experience" className="bg-white dark:bg-[#030014] transition-colors duration-300">
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Experience</h2>
-                <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
+                <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
             </div>
 
             <div className="max-w-4xl mx-auto space-y-0">
@@ -36,13 +36,13 @@ export function Experience() {
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         className="relative pl-10 border-l-4 border-slate-200 dark:border-slate-800 group transition-colors pb-16 last:pb-0"
                     >
-                        <div className="absolute -left-[14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform" />
+                        <div className="absolute -left-[14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-brand-primary rounded-full group-hover:scale-125 transition-transform" />
                         <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">{exp.title}</h3>
-                                <span className="text-[#6366f1] font-semibold text-sm bg-indigo-50 dark:bg-indigo-900/20 px-4 py-2 rounded-full tracking-wider">{exp.period}</span>
+                                <span className="text-brand-primary font-semibold text-sm bg-brand-primary/10 dark:bg-brand-primary/20 px-4 py-2 rounded-full tracking-wider">{exp.period}</span>
                             </div>
-                            <p className="text-lg font-bold text-[#6366f1] tracking-wide flex items-center gap-2 mb-4">
+                            <p className="text-lg font-bold text-brand-primary tracking-wide flex items-center gap-2 mb-4">
                                 <Briefcase size={20} /> {exp.company}
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">{exp.description}</p>

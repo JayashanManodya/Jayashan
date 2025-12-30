@@ -16,7 +16,7 @@ export function Contact() {
     <Section id="contact" className="bg-white dark:bg-[#030014] transition-colors duration-300">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Let's Connect</h2>
-        <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
+        <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
       </div>
 
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
@@ -33,13 +33,13 @@ export function Contact() {
           </p>
 
           <div className="space-y-8">
-            <a href="mailto:kpjmp28@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all duration-300">
-              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-[#6366f1] border border-slate-200 dark:border-slate-800 group-hover:bg-[#6366f1] group-hover:text-white transition-all duration-300 shadow-sm mr-6">
+            <a href="mailto:kpjmp28@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm mr-6">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-1 uppercase">Email Me</p>
-                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-[#6366f1] transition-colors">kpjmp28@gmail.com</p>
+                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">kpjmp28@gmail.com</p>
               </div>
             </a>
 
@@ -55,7 +55,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.1 }}
-                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 text-slate-400 dark:text-slate-500 hover:bg-[#6366f1] hover:text-white hover:shadow-lg hover:shadow-[#6366f1]/20 border border-slate-200 dark:border-slate-800 transition-all duration-300"
+                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 text-slate-400 dark:text-slate-500 hover:bg-brand-primary hover:text-white hover:shadow-lg hover:shadow-brand-primary/20 border border-slate-200 dark:border-slate-800 transition-all duration-300"
                   >
                     <Icon className="w-6 h-6" />
                   </motion.a>
@@ -79,7 +79,7 @@ export function Contact() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full bg-[#6366f1] hover:bg-[#5850ec] text-white py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-[#6366f1]/20 transition-all duration-300"
+            className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-brand-primary/20 transition-all duration-300"
           >
             Send Message
           </motion.button>

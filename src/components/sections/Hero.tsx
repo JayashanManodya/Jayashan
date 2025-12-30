@@ -70,7 +70,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-[20%] -right-[10%] w-[35%] h-[35%] bg-indigo-50 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-40"
+          className="absolute top-[20%] -right-[10%] w-[35%] h-[35%] bg-brand-primary/10 dark:bg-brand-primary/10 rounded-full blur-[100px] opacity-40"
         />
         <motion.div
           animate={{
@@ -118,7 +118,7 @@ export function Hero() {
                 </h1>
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white leading-[1.1] col-start-1 row-start-1 tracking-tight">
                   I'm{" "}
-                  <span className="text-[#6366f1]">{text.substring(0, 8)}</span>
+                  <span className="text-brand-primary">{text.substring(0, 8)}</span>
                   <span className="text-slate-900 dark:text-white">{text.substring(8)}</span>
                   <motion.span
                     animate={{ opacity: [0, 1, 0] }}
@@ -127,7 +127,7 @@ export function Hero() {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    className="inline-block w-[4px] h-[0.8em] bg-[#6366f1] ml-1 align-middle"
+                    className="inline-block w-[4px] h-[0.8em] bg-brand-primary ml-1 align-middle"
                   />
                 </h1>
               </div>
@@ -157,7 +157,7 @@ export function Hero() {
                 href="https://drive.google.com/file/d/1JZQYZ-Puf2LWtscAlWrNKw3EuausQ1B-/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 bg-[#6366f1] text-white rounded-2xl font-semibold hover:bg-[#5850ec] transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
+                className="px-10 py-4 bg-brand-primary text-white rounded-2xl font-semibold hover:bg-brand-primary-hover transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
               >
                 Download CV
               </a>
@@ -173,7 +173,7 @@ export function Hero() {
               className="relative"
             >
               {/* Purple Shape Container */}
-              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-[#6366f1] rounded-[60px] overflow-hidden relative shadow-2xl">
+              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-brand-primary rounded-[60px] overflow-hidden relative shadow-2xl">
                 <img
                   src="h.png"
                   alt="Jayashan Manodya"
@@ -196,20 +196,20 @@ export function Hero() {
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white dark:bg-[#030014] rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white dark:border-[#030014] group"
               >
-                <div className="w-full h-full bg-[#6366f1] rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-95">
+                <div className="w-full h-full bg-brand-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-95">
                   <ArrowUpRight size={40} className="md:w-12 md:h-12" />
                 </div>
               </motion.button>
 
               {/* Social Links Side Strip */}
               <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
-                <span className="text-xs font-semibold text-[#6366f1] rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
+                <span className="text-xs font-semibold text-brand-primary rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
                   #jayashan
                 </span>
                 <div className="w-px h-12 bg-slate-200" />
-                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
-                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
-                <a href="#" className="p-2 text-slate-400 hover:text-[#6366f1] transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
               </div>
             </motion.div>
           </div>
