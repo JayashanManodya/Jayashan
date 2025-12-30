@@ -27,12 +27,12 @@ export function TimelineItem({
       className="relative pl-10 pb-16 border-l-4 border-slate-200 dark:border-slate-800 last:pb-0 group"
     >
       {/* Timeline Dot */}
-      <div className="absolute left-[-14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-[#6366f1] rounded-full group-hover:scale-125 transition-transform duration-300 shadow-sm" />
+      <div className="absolute left-[-14px] top-0 w-6 h-6 bg-white dark:bg-[#030014] border-4 border-brand-primary rounded-full group-hover:scale-125 transition-transform duration-300 shadow-sm" />
 
       <div className="bg-white dark:bg-slate-900/50 p-8 rounded-[32px] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">{degree}</h3>
-          <span className="flex items-center text-sm font-semibold text-[#6366f1] bg-indigo-50 dark:bg-indigo-900/20 px-4 py-2 rounded-full w-fit">
+          <span className="flex items-center text-sm font-semibold text-brand-primary bg-brand-primary/10 dark:bg-brand-primary/20 px-4 py-2 rounded-full w-fit">
             <Calendar className="w-4 h-4 mr-2" />
             {period}
           </span>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -18,7 +17,7 @@ export function ThemeToggle() {
     }} transition={{
       duration: 0.3
     }} className="absolute">
-      <Moon className="w-5 h-5 text-[#6366f1]" />
+      <Moon className="w-5 h-5 text-brand-primary" />
     </motion.div>
     <motion.div initial={false} animate={{
       rotate: theme === 'light' ? 0 : -180,

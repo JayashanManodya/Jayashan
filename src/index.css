@@ -17,7 +17,7 @@ body {
     --card: 30 41 59;
     /* slate-800 */
     --card-foreground: 248 250 252;
-    --primary: 99 102 241;
+    --primary: var(--brand-primary);
     /* #6366f1 */
     --primary-foreground: 15 23 42;
     --secondary: 168 85 247;
@@ -40,7 +40,7 @@ body {
     --card: 255 255 255;
     /* white */
     --card-foreground: 15 23 42;
-    --primary: 99 102 241;
+    --primary: var(--brand-primary);
     /* #6366f1 */
     --primary-foreground: 255 255 255;
     --secondary: 168 85 247;

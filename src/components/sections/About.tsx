@@ -25,7 +25,7 @@ export function About() {
     <Section id="about" className="bg-white dark:bg-[#030014] transition-colors duration-300">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">About Me</h2>
-        <div className="h-2 w-24 bg-[#6366f1] mx-auto rounded-full" />
+        <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
       </div>
 
       <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -54,9 +54,9 @@ export function About() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all group"
+              className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all group"
             >
-              <item.icon className="w-10 h-10 text-[#6366f1] mb-4 group-hover:scale-110 transition-transform" />
+              <item.icon className="w-10 h-10 text-brand-primary mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
                 {item.label}
               </h3>
