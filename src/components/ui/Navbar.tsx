@@ -99,7 +99,7 @@ export function Navbar() {
                 initial={{ opacity: 0, scale: 0.8, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                className="absolute top-12 right-0 bg-white text-[#6366f1] text-[12px] font-bold py-2 px-3 rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.5)] whitespace-nowrap border border-[#6366f1]/20 z-50 pointer-events-none"
+                className="absolute top-12 right-0 bg-white text-[#6366f1] text-[12px] font-bold py-2 px-3 rounded-xl shadow-[0_0_20px_rgba(99,102,241,0.6)] whitespace-nowrap border border-white/20 z-50 pointer-events-none"
               >
                 <div className="flex items-center gap-1.5">
                   Try {theme === 'dark' ? 'Light' : 'Dark'} Mode!
