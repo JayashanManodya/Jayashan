@@ -54,21 +54,21 @@ export function Certifications() {
                         whileHover={{ y: -10 }}
                         className="bg-white dark:bg-slate-900/50 p-8 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all border border-slate-200 dark:border-slate-800 group flex flex-col"
                     >
-                        <div className="bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-primary/10 dark:border-brand-primary/40 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
-                            <Award size={32} className="text-brand-primary group-hover:text-white" />
+                        <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-brand-primary/5 dark:border-brand-primary/20 group-hover:bg-brand-primary transition-all duration-300">
+                            <Award size={32} className="text-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-none tracking-tight group-hover:text-brand-primary transition-colors">{cert.name}</h3>
-                        <p className="text-slate-500 dark:text-slate-400 font-semibold tracking-widest text-sm mb-6 uppercase">{cert.issuer}</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight tracking-tight">{cert.name}</h3>
+                        <p className="text-slate-500 dark:text-slate-400 font-semibold tracking-wider text-sm mb-12 uppercase">{cert.issuer}</p>
 
-                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
-                            <span className="text-xs font-semibold text-slate-300 dark:text-slate-500 tracking-[0.2em]">{cert.year}</span>
+                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+                            <span className="text-sm font-bold text-slate-300 dark:text-slate-600 tracking-wider font-outfit">{cert.year}</span>
                             <a
                                 href={cert.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-brand-primary p-3 rounded-full hover:bg-brand-primary/10 dark:hover:bg-brand-primary/20 transition-all"
+                                className="text-brand-primary hover:scale-110 transition-all duration-300"
                             >
-                                <ExternalLink size={20} />
+                                <ExternalLink size={24} />
                             </a>
                         </div>
                     </motion.div>
