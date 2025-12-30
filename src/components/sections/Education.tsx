@@ -14,6 +14,12 @@ export function Education() {
     period: '2022',
     location: 'Ratnapura, Sri Lanka',
     description: 'Completed G.C.E. Advanced Level in the Mathematics stream, including Combined Mathematics, Physics, and Information & Communication Technology (ICT). Built a strong foundation in analytical thinking, problem-solving, and computing concepts.'
+  }, {
+    degree: 'G.C.E. Ordinary Level (O/L)',
+    institution: 'Prince College, Ratnapura',
+    period: '2019',
+    location: 'Ratnapura, Sri Lanka',
+    description: 'Successfully completed G.C.E. Ordinary Level with exceptional results, laying the groundwork for further studies in Mathematics and Science.'
   }];
 
   return (

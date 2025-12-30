@@ -75,13 +75,13 @@ export function ProjectCard({
 
         <div className="flex gap-4">
           {demoUrl && (
-            <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 transition-colors shadow-lg shadow-purple-500/20" onClick={() => window.open(demoUrl, '_blank')}>
+            <Button size="sm" className="bg-[#6366f1] hover:bg-[#4f46e5] text-white rounded-full px-6 transition-all duration-300 shadow-[0_0_20px_rgba(99,102,241,0.4)]" onClick={() => window.open(demoUrl, '_blank')}>
               <ExternalLink className="w-4 h-4 mr-2" />
               Demo
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="outline" className="border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full px-6" onClick={() => window.open(githubUrl, '_blank')}>
+            <Button size="sm" variant="outline" className="border-[#6366f1]/20 dark:border-[#6366f1]/30 text-[#6366f1] hover:bg-[#6366f1] hover:text-white rounded-full px-6 transition-all duration-300" onClick={() => window.open(githubUrl, '_blank')}>
               <Github className="w-4 h-4 mr-2" />
               Code
             </Button>

@@ -12,21 +12,21 @@ export function ThemeToggle() {
   }} whileTap={{
     scale: 0.95
   }} aria-label="Toggle theme">
-      <motion.div initial={false} animate={{
+    <motion.div initial={false} animate={{
       rotate: theme === 'dark' ? 0 : 180,
       scale: theme === 'dark' ? 1 : 0
     }} transition={{
       duration: 0.3
     }} className="absolute">
-        <Moon className="w-5 h-5 text-cyan-400" />
-      </motion.div>
-      <motion.div initial={false} animate={{
+      <Moon className="w-5 h-5 text-[#6366f1]" />
+    </motion.div>
+    <motion.div initial={false} animate={{
       rotate: theme === 'light' ? 0 : -180,
       scale: theme === 'light' ? 1 : 0
     }} transition={{
       duration: 0.3
     }} className="absolute">
-        <Sun className="w-5 h-5 text-amber-500" />
-      </motion.div>
-    </motion.button>;
+      <Sun className="w-5 h-5 text-amber-500" />
+    </motion.div>
+  </motion.button>;
 }
