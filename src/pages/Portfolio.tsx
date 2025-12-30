@@ -11,7 +11,7 @@ import { Contact } from '../components/sections/Contact';
 
 export function Portfolio() {
   return (
-    <div className="bg-white dark:bg-[#030014] min-h-screen text-slate-900 dark:text-gray-100 selection:bg-[#6366f1]/20 selection:text-[#6366f1] transition-colors duration-300">
+    <div className="bg-white dark:bg-[#030014] min-h-screen text-slate-900 dark:text-gray-100 selection:bg-[#6366f1]/20 selection:text-[#6366f1] transition-colors duration-300 overflow-x-hidden">
       <ParticleBackground />
       <Navbar />
 
