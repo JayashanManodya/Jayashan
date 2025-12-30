@@ -19,7 +19,7 @@ export function Education() {
     institution: 'Prince College, Ratnapura',
     period: '2019',
     location: 'Ratnapura, Sri Lanka',
-    description: 'Successfully completed the G.C.E. Ordinary Level examination with high academic standing, establishing a strong foundation across core subjects including Mathematics and Science.'
+    description: 'Successfully completed G.C.E. Ordinary Level with exceptional results, laying the groundwork for further studies in Mathematics and Science.'
   }];
 
   return (
