@@ -21,7 +21,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({
       <textarea
         ref={ref}
         className={`
-          w-full px-6 py-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 rounded-[24px]
+          w-full px-6 py-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-[24px]
           text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 font-medium min-h-[150px]
           focus:outline-none focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/5
           transition-all duration-300

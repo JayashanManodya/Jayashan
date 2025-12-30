@@ -30,7 +30,7 @@ export function ProjectCard({
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       whileHover={{ y: -8 }}
-      className="group relative rounded-[40px] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 flex flex-col h-full"
+      className="group relative rounded-[40px] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 flex flex-col h-full"
     >
       {/* Project Image */}
       <div className="h-64 w-full bg-slate-50 relative overflow-hidden">
@@ -67,7 +67,7 @@ export function ProjectCard({
 
         <div className="flex flex-wrap gap-2 mb-8 mt-auto">
           {tags.map(tag => (
-            <span key={tag} className="text-xs font-semibold text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-800">
+            <span key={tag} className="text-xs font-semibold text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800">
               #{tag}
             </span>
           ))}

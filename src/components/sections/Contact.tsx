@@ -33,8 +33,8 @@ export function Contact() {
           </p>
 
           <div className="space-y-8">
-            <a href="mailto:kpjmp28@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all duration-300">
-              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-[#6366f1] group-hover:bg-[#6366f1] group-hover:text-white transition-all duration-300 shadow-sm mr-6">
+            <a href="mailto:kpjmp28@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-[#6366f1]/30 hover:shadow-xl hover:shadow-[#6366f1]/5 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-[#6366f1] border border-slate-200 dark:border-slate-800 group-hover:bg-[#6366f1] group-hover:text-white transition-all duration-300 shadow-sm mr-6">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
@@ -55,7 +55,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.1 }}
-                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 text-slate-400 dark:text-slate-500 hover:bg-[#6366f1] hover:text-white hover:shadow-lg hover:shadow-[#6366f1]/20 border border-slate-100 dark:border-slate-800 transition-all duration-300"
+                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 text-slate-400 dark:text-slate-500 hover:bg-[#6366f1] hover:text-white hover:shadow-lg hover:shadow-[#6366f1]/20 border border-slate-200 dark:border-slate-800 transition-all duration-300"
                   >
                     <Icon className="w-6 h-6" />
                   </motion.a>
@@ -70,7 +70,7 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 bg-slate-50 dark:bg-slate-900/50 p-10 rounded-[40px] border border-slate-100 dark:border-slate-800 shadow-sm"
+          className="space-y-6 bg-slate-50 dark:bg-slate-900/50 p-10 rounded-[40px] border border-slate-200 dark:border-slate-800 shadow-sm"
           onSubmit={e => e.preventDefault()}
         >
           <Input label="Name" placeholder="Jayashan Manodya" />
@@ -86,7 +86,7 @@ export function Contact() {
         </motion.form>
       </div>
 
-      <footer className="mt-32 pt-12 border-t border-slate-100 dark:border-slate-800 text-center">
+      <footer className="mt-32 pt-12 border-t border-slate-200 dark:border-slate-800 text-center">
         <p className="text-slate-400 dark:text-slate-500 font-semibold tracking-widest text-xs uppercase">© 2025 Jayashan Manodya. All rights reserved.</p>
       </footer>
     </Section>
