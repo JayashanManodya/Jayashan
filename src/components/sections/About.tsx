@@ -41,7 +41,7 @@ export function About() {
           <p>
             My academic journey has helped me build a solid foundation in programming, data structures, and software engineering. I particularly enjoy hands-on projects where I can experiment with emerging AI tools and bridge the gap between theoretical knowledge and practical application.          </p>
           <p>
-            Beyond my studies, I am a curious and motivated individual committed to continuous learning. I value teamwork and creativity, and I am eager to leverage my skills to grow into a versatile IT professional."
+            Beyond my studies , I am a curious and motivated individual committed to continuous learning. I value teamwork and creativity, and I am eager to leverage my skills to grow into a versatile IT professional."
           </p>
         </motion.div>
 
