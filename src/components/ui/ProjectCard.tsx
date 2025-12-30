@@ -77,7 +77,7 @@ export function ProjectCard({
           {demoUrl && (
             <Button size="sm" className="bg-[#6366f1] hover:bg-[#4f46e5] text-white rounded-full px-6 transition-all duration-300 shadow-[0_0_20px_rgba(99,102,241,0.4)]" onClick={() => window.open(demoUrl, '_blank')}>
               <ExternalLink className="w-4 h-4 mr-2" />
-              Demo
+              Demoo
             </Button>
           )}
           {githubUrl && (
