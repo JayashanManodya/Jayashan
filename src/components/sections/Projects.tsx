@@ -114,7 +114,7 @@ export function Projects() {
               onClick={() => setFilter(cat)}
               className={`px-8 py-3 rounded-full text-sm font-semibold tracking-wider transition-all duration-300 shadow-sm ${filter === cat
                 ? 'bg-[#6366f1] text-white shadow-[#6366f1]/20 shadow-lg scale-105'
-                : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
+                : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
                 }`}
             >
               {cat}
