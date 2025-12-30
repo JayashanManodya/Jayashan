@@ -4,7 +4,7 @@ import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
   title: 'Portfolio Website',
-  description: 'A cutting-edge, responsive portfolio website featuring modern development workflows, an intelligent dark/light mode system, and premium animations. Built with a focus on performance and minimal design aesthetics.',
+  description: 'Developed a modern, performance-focused portfolio website using React + TypeScript, featuring a dark/light adaptive theme, smooth Framer Motion animations, and a mobile-first responsive architecture.',
   tags: [
     'React',
     'TypeScript',
