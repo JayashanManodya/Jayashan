@@ -68,7 +68,7 @@ const allProjects = [{
   ],
   category: 'Web',
   image: 'projectPhotos/InkSpire-BookStore.jpg',
-  githubUrl: '#',
+  githubUrl: 'https://github.com/JayashanManodya/Inkspire_Bookstore',
 },
 {
   title: 'Automated Room Comfort Control System',
@@ -84,7 +84,7 @@ const allProjects = [{
   description: 'My first personal website built with HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
   category: 'Web',
-  githubUrl: '#',
+  githubUrl: 'https://github.com/JayashanManodya/Portfolio',
   image: 'projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
