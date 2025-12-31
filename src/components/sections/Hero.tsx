@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Mail, Github, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function Hero() {
@@ -204,12 +204,18 @@ export function Hero() {
               {/* Social Links Side Strip */}
               <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-center">
                 <span className="text-xs font-semibold text-brand-primary rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
-                  #jayashan
+                  GET IN TOUCH
                 </span>
                 <div className="w-px h-12 bg-slate-200" />
-                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
-                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
-                <a href="#" className="p-2 text-slate-400 hover:text-brand-primary transition-colors"><div className="w-2 h-2 rounded-full bg-current" /></a>
+                <a href="mailto:kpjmp28@gmail.com" title="Email Me" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                  <Mail size={20} />
+                </a>
+                <a href="https://github.com/JayashanManodya" target="_blank" rel="noopener noreferrer" title="GitHub" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                  <Github size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/jayashanmanodya/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                  <Linkedin size={20} />
+                </a>
               </div>
             </motion.div>
           </div>
