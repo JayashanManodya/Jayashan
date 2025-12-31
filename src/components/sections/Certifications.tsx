@@ -54,7 +54,7 @@ export function Certifications() {
                         whileHover={{ y: -10 }}
                         className="bg-white dark:bg-slate-900/50 p-8 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all border border-slate-200 dark:border-slate-800 group flex flex-col"
                     >
-                        <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-brand-primary/5 dark:border-brand-primary/20 group-hover:bg-brand-primary transition-all duration-300">
+                        <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary transition-all duration-300">
                             <Award size={32} className="text-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
                         </div>
                         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight tracking-tight">{cert.name}</h3>

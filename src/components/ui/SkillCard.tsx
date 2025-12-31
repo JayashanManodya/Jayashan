@@ -25,7 +25,7 @@ export function SkillCard({
       className="p-8 rounded-[32px] bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-300 group"
     >
       <div className="flex items-center gap-4 mb-8">
-        <div className="p-4 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary border border-brand-primary/10 dark:border-brand-primary/40 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+        <div className="p-4 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
           <Icon size={28} />
         </div>
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">{title}</h3>
@@ -37,7 +37,7 @@ export function SkillCard({
           return (
             <span
               key={index}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 rounded-xl border-2 border-slate-200 dark:border-brand-primary/30 hover:bg-brand-primary/5 hover:border-brand-primary/20 hover:text-brand-primary transition-all duration-200"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-300"
             >
               {iconData && (
                 <svg

@@ -67,7 +67,7 @@ export function ProjectCard({
 
         <div className="flex flex-wrap gap-2 mb-8 mt-auto">
           {tags.map(tag => (
-            <span key={tag} className="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 px-3 py-1 rounded-full border-2 border-slate-200 dark:border-brand-primary/30 transition-colors">
+            <span key={tag} className="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30 px-3 py-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 transition-all duration-300">
               #{tag}
             </span>
           ))}
