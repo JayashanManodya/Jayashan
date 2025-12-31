@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-white dark:bg-[#030014] transition-colors duration-300"
+      className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden transition-colors duration-300"
     >
       {/* Background Animated Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

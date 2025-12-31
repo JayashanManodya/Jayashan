@@ -13,7 +13,7 @@ export function Contact() {
   ];
 
   return (
-    <Section id="contact" className="bg-white dark:bg-[#030014] transition-colors duration-300">
+    <Section id="contact" className="transition-colors duration-300">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Let's Connect</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
