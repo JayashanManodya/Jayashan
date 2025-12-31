@@ -26,7 +26,7 @@ export function Skills() {
   }];
 
   return (
-    <Section id="skills" className="bg-slate-50 dark:bg-[#06001a] transition-colors duration-300">
+    <Section id="skills" className="transition-colors duration-300">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Skills</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
