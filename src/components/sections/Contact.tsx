@@ -87,6 +87,7 @@ export function Contact() {
       </div>
 
       <footer className="mt-32 pt-12 border-t border-slate-200 dark:border-slate-800 text-center">
+        <p className="text-brand-primary font-bold text-1xl mb-4 tracking-wide">නමෝ බුද්ධාය...!</p>
         <p className="text-slate-400 dark:text-slate-500 font-semibold tracking-widest text-xs uppercase">© 2025 Jayashan Manodya. All rights reserved.</p>
       </footer>
     </Section>
