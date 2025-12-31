@@ -28,7 +28,7 @@ export function SkillCard({
         <div className="p-4 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
           <Icon size={28} />
         </div>
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">{title}</h3>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">{title}</h3>
       </div>
 
       <div className="flex flex-wrap gap-2">

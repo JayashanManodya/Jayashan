@@ -57,7 +57,7 @@ export function Certifications() {
                         <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary transition-all duration-300">
                             <Award size={32} className="text-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight tracking-tight">{cert.name}</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight tracking-tight group-hover:text-brand-primary transition-colors">{cert.name}</h3>
                         <p className="text-slate-500 dark:text-slate-400 font-semibold tracking-wider text-sm mb-12 uppercase">{cert.issuer}</p>
 
                         <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
