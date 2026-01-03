@@ -6,6 +6,7 @@ import { Skills } from '../components/sections/Skills';
 import { Education } from '../components/sections/Education';
 import { Certifications } from '../components/sections/Certifications';
 import { Projects } from '../components/sections/Projects';
+import { Blogs } from '../components/sections/Blogs';
 import { Contact } from '../components/sections/Contact';
 
 export function Portfolio() {
@@ -21,6 +22,7 @@ export function Portfolio() {
         <Experience />
         <Education />
         <Certifications />
+        <Blogs />
         <Contact />
       </main>
     </div>
