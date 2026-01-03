@@ -8,6 +8,7 @@ interface TimelineItemProps {
   location: string;
   description: string;
   index: number;
+  badges?: string[];
 }
 
 export function TimelineItem({
@@ -16,7 +17,8 @@ export function TimelineItem({
   period,
   location,
   description,
-  index
+  index,
+  badges
 }: TimelineItemProps) {
   return (
     <motion.div
@@ -48,7 +50,20 @@ export function TimelineItem({
           </span>
         </div>
 
-        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">{description}</p>
+        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg mb-6">{description}</p>
+
+        {badges && badges.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {badges.map((badge, idx) => (
+              <span
+                key={idx}
+                className="px-4 py-1.5 rounded-xl text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-primary transition-colors cursor-default"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </motion.div>
   );
