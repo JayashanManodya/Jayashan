@@ -1,18 +1,18 @@
 
-# Jayashan Manodya | Portfolio 🚀
+# Jayashan Manodya | Portfolio 
 
 A modern, high-performance personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Features smooth animations, a dark/light mode toggle, and a responsive design tailored for software engineers.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌓 **Dynamic Theme:** Seamless switching between Dark and Light modes.
-- ⚡ **Performance:** Built with Vite for ultra-fast development and optimized production builds.
-- 🎨 **Animations:** Powered by Framer Motion for premium-feel transitions and micro-interactions.
-- 📱 **Fully Responsive:** Optimized for all screen sizes (Mobile, Tablet, Desktop).
-- ✉️ **Contact Form:** Integrated with Resend for reliable email delivery.
-- 🛠️ **Tech Stack:**
+-  **Dynamic Theme:** Seamless switching between Dark and Light modes.
+-  **Performance:** Built with Vite for ultra-fast development and optimized production builds.
+-  **Animations:** Powered by Framer Motion for premium-feel transitions and micro-interactions.
+-  **Fully Responsive:** Optimized for all screen sizes (Mobile, Tablet, Desktop).
+-  **Contact Form:** Integrated with Resend for reliable email delivery.
+-  **Tech Stack:**
     - **Frontend:** React 18, TypeScript, Tailwind CSS
     - **Animation:** Framer Motion
     - **Icons:** Lucide React
@@ -20,7 +20,7 @@ A modern, high-performance personal portfolio website built with **React**, **Vi
 
 ---
 
-## 🛠️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ A modern, high-performance personal portfolio website built with **React**, **Vi
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 /
@@ -77,13 +77,14 @@ A modern, high-performance personal portfolio website built with **React**, **Vi
 
 ---
 
-## 🤝 Contact
+## Contact
 
 **Jayashan Manodya**  
-📧 [kpjmp28@gmail.com](mailto:kpjmp28@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/jayashanmanodya/)  
-💻 [GitHub](https://github.com/JayashanManodya)
+ [kpjmp28@gmail.com](mailto:kpjmp28@gmail.com)  
+ [LinkedIn](https://www.linkedin.com/in/jayashanmanodya/)  
+ [GitHub](https://github.com/JayashanManodya)
 
 ---
 
+නමෝ බුද්ධාය...!
 Developed with ❤️ by Jayashan Manodya.
