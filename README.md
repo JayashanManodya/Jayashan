@@ -86,5 +86,5 @@ A modern, high-performance personal portfolio website built with **React**, **Vi
 
 ---
 
-නමෝ බුද්ධාය...!
+නමෝ බුද්ධාය...! | 
 Developed with ❤️ by Jayashan Manodya.
