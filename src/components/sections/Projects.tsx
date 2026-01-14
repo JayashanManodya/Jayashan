@@ -14,9 +14,9 @@ const allProjects = [{
     'Python',
     'Google Colab'
   ],
-  category: ['Web', 'AI/ML'],
-  image: 'projectPhotos/weactherLK.png',
-  githubUrl: 'https://lnkd.in/gvEq5CvF',
+  category: ['Web', 'ML'],
+  image: 'projectPhotos/weatherLK.png',
+  githubUrl: 'https://github.com/JayashanManodya/WeatherLK',
 },
 {
   title: 'Portfolio Website',
@@ -65,7 +65,7 @@ const allProjects = [{
     'Roboflow',
     'OCR'
   ],
-  category: 'Computer Vision',
+  category: ['Computer Vision', 'DL'],
   image: 'projectPhotos/plateX.jpg',
   githubUrl: 'https://github.com/JayashanManodya/PlateX',
 }
