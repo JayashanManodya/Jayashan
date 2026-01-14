@@ -3,6 +3,22 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'WeatherLK',
+  description: 'WeatherLK is a full-stack machine learning–based weather forecasting web application designed for Sri Lankan cities. It uses historical weather data since 2010 to predict temperature, rainfall, wind speed, sunrise, sunset, and elevation through a trained Random Forest model. The machine learning model was trained in Google Colab and served via a FastAPI backend. A modern React + Vite frontend provides a clean, responsive dashboard with city-based search and date selection. This project demonstrates end-to-end ML development, API integration, and production-ready web deployment.',
+  tags: [
+    'React',
+    'Vite',
+    'FastAPI',
+    'Machine Learning',
+    'Random Forest',
+    'Python',
+    'Google Colab'
+  ],
+  category: ['Web', 'AI/ML'],
+  image: 'projectPhotos/weactherLK.png',
+  githubUrl: 'https://lnkd.in/gvEq5CvF',
+},
+{
   title: 'Portfolio Website',
   description: 'Developed a modern, performance-focused portfolio website using React + TypeScript, featuring a dark/light adaptive theme, smooth Framer Motion animations, and a mobile-first responsive architecture.',
   tags: [
@@ -32,7 +48,7 @@ const allProjects = [{
     'n8n',
     'Full Stack'
   ],
-  category: ['Web', 'AI/ML'],
+  category: ['Web', 'AI'],
   image: 'projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
