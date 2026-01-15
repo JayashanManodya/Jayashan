@@ -33,13 +33,13 @@ export function Contact() {
           </p>
 
           <div className="space-y-8">
-            <a href="mailto:kpjmp28@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all duration-300">
+            <a href="mailto:kpjayashan@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all duration-300">
               <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm mr-6">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-1 uppercase">Email Me</p>
-                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">kpjmp28@gmail.com</p>
+                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">kpjayashan@gmail.com</p>
               </div>
             </a>
 
