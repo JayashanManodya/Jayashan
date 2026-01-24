@@ -39,7 +39,7 @@ export function Blogs() {
                         <Button
                             size="lg"
                             className="bg-brand-primary hover:bg-brand-primary-hover text-white rounded-full px-8 py-6 text-lg transition-all duration-300 shadow-[0_0_20px_var(--brand-primary-glow)] group-hover:scale-105 active:scale-95"
-                            onClick={() => window.open('https://medium.com/@kpjmp28', '_blank')}
+                            onClick={() => window.open('https://medium.com/@jayashanmanodya', '_blank')}
                         >
                             <ExternalLink className="w-5 h-5 mr-3" />
                             Visit Medium
