@@ -1,0 +1,29 @@
+# Jayashan Manodya | Portfolio
+
+> I'm Jayashan Manodya, a second-year undergraduate at SLIIT specializing in Artificial Intelligence. I am passionate about solving complex problems through innovative AI and software engineering solutions.
+
+## Summary
+
+- **Role:** AI Specialization Undergraduate (2Y2S)
+- **Education:** Sri Lanka Institute of Information Technology (SLIIT)
+- **Location:** Ratnapura, Sri Lanka
+- **Experience:** Machine Learning, Data Science, Software Engineering, AI Integration
+
+## Technical Skills
+
+- **Frontend:** React 18, TypeScript, Tailwind CSS
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+- **Backend/API:** Node.js, Resend API
+- **Interests:** Machine Learning, Data Science, Software Engineering, AI Integration
+
+## Projects
+
+- See the [Projects section](#projects) on the main site for a detailed list of work.
+
+## Contact Information
+
+- **Email:** [kpjmp28@gmail.com](mailto:kpjmp28@gmail.com)
+- **LinkedIn:** [Jayashan Manodya](https://www.linkedin.com/in/jayashanmanodya/)
+- **GitHub:** [Jayashan Manodya](https://github.com/JayashanManodya)
+- **CV:** [Download CV](https://drive.google.com/file/d/1LXNuW1mwzldW8yEvykdgu0DG-nSQ7c1y/view?usp=sharing)

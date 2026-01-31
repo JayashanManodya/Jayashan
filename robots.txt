@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# LLM Crawler Guidance
+Sitemap: /llms.txt
