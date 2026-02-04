@@ -14,7 +14,7 @@ const allProjects = [{
     'RAG',
     'AI Agents'
   ],
-  category: ['Web', 'AI/ML'],
+  category: ['Gen AI'],
   image: 'projectPhotos/ikms.png',
   githubUrl: 'https://github.com/JayashanManodya/ikms-rag-agent-system',
   demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
