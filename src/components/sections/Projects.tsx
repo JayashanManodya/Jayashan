@@ -3,6 +3,23 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'Multi-Agent Retrieval-Augmented Knowledge System',
+  description: 'A high-accuracy RAG system that answers questions from PDFs using query planning, vector embeddings, Pinecone DB, and multi-agent orchestration. Built with FastAPI, LangChain, and LangGraph, it ensures context-grounded answers with minimal hallucinations.',
+  tags: [
+    'FastAPI',
+    'LangChain',
+    'LangGraph',
+    'Pinecone',
+    'Python',
+    'RAG',
+    'AI Agents'
+  ],
+  category: ['Web', 'AI/ML'],
+  image: 'projectPhotos/ikms.png',
+  githubUrl: 'https://github.com/JayashanManodya/ikms-rag-agent-system',
+  demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
+},
+{
   title: 'WeatherLK',
   description: 'WeatherLK is a full-stack machine learning–based weather forecasting web application designed for Sri Lankan cities. It uses historical weather data since 2010 to predict temperature, rainfall, wind speed, sunrise, sunset, and elevation through a trained Random Forest model. The machine learning model was trained in Google Colab and served via a FastAPI backend. A modern React + Vite frontend provides a clean, responsive dashboard with city-based search and date selection. This project demonstrates end-to-end ML development, API integration, and production-ready web deployment.',
   tags: [
