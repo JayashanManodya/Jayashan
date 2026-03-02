@@ -4,6 +4,12 @@ import { Section } from '../ui/Section';
 
 const certifications = [
     {
+        name: "AI Engeerner bootcamp",
+        issuer: "STEM Link",
+        year: "2026",
+        link: "https://credsverse.com/credentials/5bfb6f55-c57c-48f9-ad89-e9ffa384e6b1"
+    },
+    {
         name: "AI/ML Engineer - Stage 1",
         issuer: "SLIIT",
         year: "2025",
