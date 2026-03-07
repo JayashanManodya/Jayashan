@@ -4,7 +4,7 @@ import { Section } from '../ui/Section';
 
 const certifications = [
     {
-        name: "AI Engeerner bootcamp",
+        name: "AI Engineer Bootcamp",
         issuer: "STEM Link",
         year: "2026",
         link: "https://credsverse.com/credentials/5bfb6f55-c57c-48f9-ad89-e9ffa384e6b1"

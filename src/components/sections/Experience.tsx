@@ -4,18 +4,17 @@ import { Section } from '../ui/Section';
 
 const experiences = [
     {
-        title: "Graphic Designer",
+        title: "Lead Graphic Designer",
         company: "Glanz Digital",
         period: "2025 - Present",
-        description: "Working as a remote part-time Graphic Designer, responsible for creating impactful visual content and digital assets to support brand identity and marketing objectives."
+        description: "Leading visual design efforts as a remote part-time Lead Graphic Designer, responsible for creating impactful visual content and digital assets to support brand identity and marketing objectives."
+    },
+    {
+        title: "Founder & Senior Graphic Designer",
+        company: "PIXEL 104",
+        period: "2017 - 2022",
+        description: "Founded and led a creative design studio delivering high-quality graphic design services, specializing in branding, social media assets, and digital illustrations while managing end-to-end project workflows for an international clientele."
     }
-    , {
-        title: "Graphic Designer",
-        company: "Fiverr · Freelance",
-        period: "2020 - 2023",
-        description: "Delivered high-quality graphic design services to international clients, specializing in branding, social media assets, and digital illustrations while managing end-to-end project workflows."
-    }
-
 ];
 
 export function Experience() {

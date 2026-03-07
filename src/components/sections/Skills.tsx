@@ -6,7 +6,7 @@ export function Skills() {
   const skillCategories = [{
     title: 'AI & ML',
     icon: Brain,
-    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV', 'NLP', 'Pandas', 'NumPy']
+    skills: ['TensorFlow', 'PyTorch', 'LangChain', 'LangGraph', 'OpenAI API', 'Scikit-learn', 'OpenCV', 'YOLO', 'PaddleOCR', 'NLP', 'Pandas', 'NumPy']
   }, {
     title: 'Programming',
     icon: Code2,
@@ -14,15 +14,15 @@ export function Skills() {
   }, {
     title: 'Web Development',
     icon: Layout,
-    skills: ['React.js', 'Tailwind CSS', 'FastAPI', 'REST APIs']
+    skills: ['React.js', 'FastAPI', 'Flask', 'Spring Boot', 'Tailwind CSS', 'REST APIs']
   }, {
     title: 'Creative Design',
     icon: Paintbrush,
     skills: ['Photoshop', 'Canva', 'Illustrator', 'Premiere Pro']
   }, {
-    title: 'Tools',
+    title: 'Tools & DB',
     icon: Terminal,
-    skills: ['Git', 'Vercel', 'Jupyter', 'VS Code', 'IntelliJ IDEA', 'Hugging Face']
+    skills: ['Git', 'Docker', 'n8n', 'Pinecone', 'MongoDB', 'PostgreSQL', 'MySQL', 'Maven', 'VS Code', 'IntelliJ IDEA']
   }];
 
   return (
