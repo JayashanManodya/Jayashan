@@ -83,7 +83,7 @@ const allProjects = [{
     'n8n',
     'Full Stack'
   ],
-  category: ['Web', 'AI'],
+  category: ['Full Stack', 'AI'],
   image: 'projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
@@ -117,7 +117,7 @@ const allProjects = [{
     'OOP',
     'File Handling'
   ],
-  category: 'Web',
+  category: 'Full Stack',
   image: 'projectPhotos/InkSpire-BookStore.jpg',
   githubUrl: 'https://github.com/JayashanManodya/Inkspire_Bookstore',
 },
