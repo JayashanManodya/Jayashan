@@ -20,6 +20,24 @@ const allProjects = [{
   demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
 },
 {
+  title: 'FuelAlert - Real-Time Fuel Availability Tracker',
+  description: 'A real-time fuel station monitoring platform for Sri Lanka with interactive maps, community-driven fuel status updates, trilingual support (English, Sinhala, Tamil), and an admin panel. Built with React, Express, Neon PostgreSQL, Drizzle ORM, and Leaflet maps.',
+  tags: [
+    'React',
+    'TypeScript',
+    'Express',
+    'PostgreSQL',
+    'Drizzle ORM',
+    'Leaflet',
+    'Tailwind CSS',
+    'Vite'
+  ],
+  category: ['Full Stack'],
+  image: 'projectPhotos/FuelAlert_low.png',
+  githubUrl: 'https://github.com/JayashanManodya/Fuel-Watch-LK',
+  demoUrl: 'https://fuelalert.online/',
+},
+{
   title: 'WeatherLK',
   description: 'WeatherLK is a full-stack machine learning–based weather forecasting web application designed for Sri Lankan cities. It uses historical weather data since 2010 to predict temperature, rainfall, wind speed, sunrise, sunset, and elevation through a trained Random Forest model. The machine learning model was trained in Google Colab and served via a FastAPI backend. A modern React + Vite frontend provides a clean, responsive dashboard with city-based search and date selection. This project demonstrates end-to-end ML development, API integration, and production-ready web deployment.',
   tags: [
@@ -85,8 +103,8 @@ const allProjects = [{
   category: ['Computer Vision', 'DL'],
   image: 'projectPhotos/plateX.jpg',
   githubUrl: 'https://github.com/JayashanManodya/PlateX',
-}
-  , {
+},
+{
   title: 'InkSpire BookStore',
   description: 'A modern online bookstore management system developed using Java EE technologies. The system provides secure user authentication, book inventory management, shopping cart functionality, order processing, and an admin dashboard, using a file-based data storage approach.',
   tags: [
@@ -110,7 +128,6 @@ const allProjects = [{
   category: 'IoT',
   image: 'projectPhotos/Automated-Room-Comfort-Control-System.png',
   githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
-
 },
 {
   title: 'Portfolio V1',
@@ -124,7 +141,7 @@ const allProjects = [{
 
 export function Projects() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Web', 'AI/ML', 'Computer Vision', 'IoT'];
+  const categories = ['All', 'Full Stack', 'Web', 'AI/ML', 'Computer Vision', 'IoT'];
 
   const filteredProjects = filter === 'All'
     ? allProjects
