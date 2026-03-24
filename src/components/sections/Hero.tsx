@@ -154,7 +154,7 @@ export function Hero() {
                 About
               </button>
               <a
-                href="https://drive.google.com/file/d/1ZegMP0hId7EJ1BfqNJNsAe7n-qq6s6Jh/view?usp=sharing"
+                href="https://drive.google.com/file/d/1CVw_h_GvnFhanuX5Hh_Xm-31ufk-zDmS/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-4 bg-brand-primary text-white rounded-2xl font-semibold hover:bg-brand-primary-hover transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
