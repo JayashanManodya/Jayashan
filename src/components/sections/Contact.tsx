@@ -1,16 +1,48 @@
+import { useState } from 'react';
 import { Section } from '../ui/Section';
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
-import { Mail, Github, Linkedin, Facebook, Instagram } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, Github, Linkedin, Facebook, Instagram, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const socialLinks = [
     { Icon: Github, href: 'https://github.com/JayashanManodya' },
     { Icon: Linkedin, href: 'https://www.linkedin.com/in/jayashanmanodya/' },
     { Icon: Facebook, href: 'https://www.facebook.com/jayashan.manodya' },
     { Icon: Instagram, href: 'https://www.instagram.com/jayashan.manodya/' }
   ];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setStatus('error');
+      setErrorMessage((error as Error).message);
+    }
+  };
 
   return (
     <Section id="contact" className="transition-colors duration-300">
@@ -70,19 +102,84 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 bg-slate-50 dark:bg-slate-900/50 p-10 rounded-[40px] border border-slate-200 dark:border-slate-800 shadow-sm"
-          onSubmit={e => e.preventDefault()}
+          className="relative space-y-6 bg-slate-50 dark:bg-slate-900/50 p-10 rounded-[40px] border border-slate-200 dark:border-slate-800 shadow-sm"
+          onSubmit={handleSubmit}
         >
-          <Input label="Name" placeholder="Jayashan Manodya" />
-          <Input label="Email" type="email" placeholder="kpjmp28@gmail.com" />
-          <Textarea label="Message" placeholder="Tell me about your project or opportunity..." />
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-brand-primary/20 transition-all duration-300"
-          >
-            Send Message
-          </motion.button>
+          <Input 
+            label="Name" 
+            placeholder="Jayashan Manodya" 
+            required 
+            value={formData.name}
+            onChange={e => setFormData({ ...formData, name: e.target.value })}
+            disabled={status === 'loading'}
+          />
+          <Input 
+            label="Email" 
+            type="email" 
+            placeholder="kpjmp28@gmail.com" 
+            required
+            value={formData.email}
+            onChange={e => setFormData({ ...formData, email: e.target.value })}
+            disabled={status === 'loading'}
+          />
+          <Textarea 
+            label="Message" 
+            placeholder="Tell me about your project or opportunity..." 
+            required
+            value={formData.message}
+            onChange={e => setFormData({ ...formData, message: e.target.value })}
+            disabled={status === 'loading'}
+          />
+          
+          <div className="pt-2">
+            <motion.button
+              whileHover={{ scale: status === 'idle' ? 1.02 : 1 }}
+              whileTap={{ scale: status === 'idle' ? 0.98 : 1 }}
+              disabled={status === 'loading'}
+              className={`
+                w-full py-6 rounded-[24px] text-lg font-bold tracking-widest transition-all duration-300 flex items-center justify-center gap-3
+                ${status === 'success' 
+                  ? 'bg-green-500 text-white shadow-lg shadow-green-500/20' 
+                  : status === 'error'
+                  ? 'bg-red-500 text-white shadow-lg shadow-red-500/20'
+                  : 'bg-brand-primary hover:bg-brand-primary-hover text-white shadow-lg shadow-brand-primary/20'
+                }
+                disabled:opacity-70 disabled:cursor-not-allowed
+              `}
+            >
+              {status === 'loading' ? (
+                <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              ) : status === 'success' ? (
+                <>
+                  <CheckCircle2 className="w-6 h-6" />
+                  Message Sent!
+                </>
+              ) : status === 'error' ? (
+                <>
+                  <AlertCircle className="w-6 h-6" />
+                  Retry Send
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </>
+              )}
+            </motion.button>
+            
+            <AnimatePresence>
+              {status === 'error' && (
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="mt-4 text-center text-red-500 font-semibold text-sm"
+                >
+                  {errorMessage || 'Something went wrong. Please try again.'}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.form>
       </div>
 
