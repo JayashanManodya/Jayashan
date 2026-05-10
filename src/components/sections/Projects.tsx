@@ -3,6 +3,29 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'TeaPlanter · AI Powered Tea Estate Management',
+  description:
+    'In progress: an AI-powered tea estate management platform with role-based dashboards for harvest, workforce, attendance, inventory, and finances. Includes YOLOv8–based tea leaf disease prediction, a multi-agent AI assistant, and price forecasting (XGBoost).',
+  tags: [
+    'Java',
+    'Spring Boot',
+    'PostgreSQL',
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Vite',
+    'Spring Security',
+    'OAuth2',
+    'Clerk',
+    'YOLO',
+    'RandomForest'
+  ],
+  category: ['Full Stack', 'AI/ML'],
+  image: 'projectPhotos/teaPlanter.png',
+  githubUrl: 'https://github.com/JayashanManodya/Tea-Planter',
+  demoUrl: 'https://www.teaplanter.online/',
+},
+{
   title: 'Multi-Agent Retrieval-Augmented Knowledge System',
   description: 'A high-accuracy RAG system that answers questions from PDFs using query planning, vector embeddings, Pinecone DB, and multi-agent orchestration. Built with FastAPI, LangChain, and LangGraph, it ensures context-grounded answers with minimal hallucinations.',
   tags: [
