@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
@@ -20,7 +21,7 @@ const allProjects = [{
     'YOLO',
     'RandomForest'
   ],
-  category: ['Full Stack', 'AI/ML'],
+  category: ['Full Stack', 'ML', 'DL', 'Gen AI'],
   image: 'projectPhotos/teaPlanter.png',
   githubUrl: 'https://github.com/JayashanManodya/Tea-Planter',
   demoUrl: 'https://www.teaplanter.online/',
@@ -72,7 +73,7 @@ const allProjects = [{
     'Python',
     'Google Colab'
   ],
-  category: ['Web', 'ML'],
+  category: ['Full Stack', 'ML'],
   image: 'projectPhotos/weatherLK.png',
   githubUrl: 'https://github.com/JayashanManodya/WeatherLK',
 },
@@ -88,8 +89,7 @@ const allProjects = [{
     'Vite',
     'PostCSS'
   ],
-  category: 'Web',
-  image: 'projectPhotos/posterv1.png',
+  category: ['Others'],
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
@@ -106,7 +106,7 @@ const allProjects = [{
     'n8n',
     'Full Stack'
   ],
-  category: ['Full Stack', 'AI'],
+  category: ['Full Stack', 'Gen AI'],
   image: 'projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
@@ -123,7 +123,7 @@ const allProjects = [{
     'Roboflow',
     'OCR'
   ],
-  category: ['Computer Vision', 'DL'],
+  category: ['DL', 'Full Stack'],
   image: 'projectPhotos/plateX.jpg',
   githubUrl: 'https://github.com/JayashanManodya/PlateX',
 },
@@ -148,7 +148,7 @@ const allProjects = [{
   title: 'Automated Room Comfort Control System',
   description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
   tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
-  category: 'IoT',
+  category: ['Others'],
   image: 'projectPhotos/Automated-Room-Comfort-Control-System.png',
   githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
 },
@@ -156,15 +156,17 @@ const allProjects = [{
   title: 'Portfolio V1',
   description: 'My first personal website built with HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
-  category: 'Web',
-  githubUrl: 'https://github.com/JayashanManodya/Portfolio',
+  category: ['Others'],
   image: 'projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
 
+const PROJECTS_PER_PAGE = 3;
+
 export function Projects() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Full Stack', 'Web', 'AI/ML', 'Computer Vision', 'IoT'];
+  const [pageIndex, setPageIndex] = useState(0);
+  const categories = ['All', 'Full Stack', 'Gen AI', 'Mobile', 'ML', 'DL', 'Others'];
 
   const filteredProjects = filter === 'All'
     ? allProjects
@@ -173,6 +175,22 @@ export function Projects() {
         ? p.category.includes(filter)
         : p.category === filter
     );
+
+  useEffect(() => {
+    setPageIndex(0);
+  }, [filter]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
+
+  useEffect(() => {
+    setPageIndex(i => Math.min(i, Math.max(0, totalPages - 1)));
+  }, [totalPages]);
+  const clampedPage = Math.min(pageIndex, totalPages - 1);
+  const start = clampedPage * PROJECTS_PER_PAGE;
+  const paginatedProjects = filteredProjects.slice(start, start + PROJECTS_PER_PAGE);
+
+  const goPrev = () => setPageIndex(p => Math.max(0, p - 1));
+  const goNext = () => setPageIndex(p => Math.min(totalPages - 1, p + 1));
 
   return (
     <Section id="projects" className="transition-colors duration-300">
@@ -197,10 +215,36 @@ export function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {filteredProjects.map((project, index) => (
+        {paginatedProjects.map((project, index) => (
           <ProjectCard key={project.title} {...project} index={index} />
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-6 mt-12 px-4">
+          <button
+            type="button"
+            onClick={goPrev}
+            disabled={clampedPage === 0}
+            aria-label="Previous projects page"
+            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 shadow-sm transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-slate-900"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <span className="text-sm font-semibold tracking-wide text-slate-600 dark:text-slate-400 min-w-[6rem] text-center tabular-nums">
+            Page {clampedPage + 1} of {totalPages}
+          </span>
+          <button
+            type="button"
+            onClick={goNext}
+            disabled={clampedPage >= totalPages - 1}
+            aria-label="Next projects page"
+            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 shadow-sm transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-slate-900"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      )}
     </Section>
   );
 }
