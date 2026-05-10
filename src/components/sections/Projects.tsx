@@ -62,6 +62,21 @@ const allProjects = [{
   demoUrl: 'https://fuelalert.online/',
 },
 {
+  title: 'BookLink · Community Book Exchange',
+  description:
+    'BookLink is a community app for listing books and arranging in-person exchanges: browse listings, send exchange requests, chat with listers, manage a wishlist, leave reviews, and report issues. The product is a React Native (Expo) client with an Express API backed by MongoDB, using Clerk for authentication.',
+  tags: [
+    'React Native',
+    'Expo',
+    'Express',
+    'MongoDB',
+    'Clerk',
+    'TypeScript',
+    'REST API'
+  ],
+  category: ['Mobile', 'Full Stack'],
+},
+{
   title: 'WeatherLK',
   description: 'WeatherLK is a full-stack machine learning–based weather forecasting web application designed for Sri Lankan cities. It uses historical weather data since 2010 to predict temperature, rainfall, wind speed, sunrise, sunset, and elevation through a trained Random Forest model. The machine learning model was trained in Google Colab and served via a FastAPI backend. A modern React + Vite frontend provides a clean, responsive dashboard with city-based search and date selection. This project demonstrates end-to-end ML development, API integration, and production-ready web deployment.',
   tags: [
@@ -90,6 +105,7 @@ const allProjects = [{
     'PostCSS'
   ],
   category: ['Others'],
+  image: 'projectPhotos/jayashan.online.png',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
