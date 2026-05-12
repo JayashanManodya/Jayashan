@@ -172,8 +172,8 @@ export function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
-              {/* Purple Shape Container */}
-              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-brand-primary rounded-[60px] overflow-hidden relative shadow-2xl">
+              {/* Photo frame */}
+              <div className="w-[300px] h-[400px] md:w-[450px] md:h-[550px] bg-brand-primary rounded-[60px] overflow-hidden relative shadow-[0_0_0_1px_rgba(0,0,0,0.12),0_12px_36px_-8px_rgba(0,0,0,0.45),0_28px_80px_-12px_rgba(0,0,0,0.38)]">
                 <img
                   src="h.png"
                   alt="Jayashan Manodya"
