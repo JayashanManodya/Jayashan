@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <Section id="contact" className="transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Let's Connect</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">Let's Connect</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
       </div>
 
@@ -26,25 +26,25 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-slate-600 dark:text-slate-400 mb-12 leading-relaxed text-lg font-normal">
+          <p className="text-black/70 dark:text-white/70 mb-12 leading-relaxed text-lg font-normal">
             I'm currently looking for internship opportunities in AI/ML and Full
             Stack Development. Whether you have a question, a project idea, or
             just want to say hi, I'll try my best to get back to you!
           </p>
 
           <div className="space-y-8">
-            <a href="mailto:kpjayashan@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all duration-300">
-              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm mr-6">
+            <a href="mailto:kpjayashan@gmail.com" className="group flex items-center p-6 rounded-[32px] bg-black/[0.04] dark:bg-white/[0.06] border border-black/15 dark:border-white/15 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-white dark:bg-black text-brand-primary border border-black/15 dark:border-white/15 group-hover:bg-brand-primary group-hover:text-black transition-all duration-300 shadow-sm mr-6">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-1 uppercase">Email Me</p>
-                <p className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">kpjayashan@gmail.com</p>
+                <p className="text-xs font-semibold tracking-widest text-black/45 dark:text-white/45 mb-1 uppercase">Email Me</p>
+                <p className="text-xl font-bold text-black dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">kpjayashan@gmail.com</p>
               </div>
             </a>
 
             <div className="pt-8">
-              <p className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 mb-6 ml-1 uppercase">
+              <p className="text-xs font-semibold tracking-widest text-black/45 dark:text-white/45 mb-6 ml-1 uppercase">
                 Social Media
               </p>
               <div className="flex gap-4">
@@ -55,7 +55,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.1 }}
-                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 text-slate-400 dark:text-slate-500 hover:bg-brand-primary hover:text-white hover:shadow-lg hover:shadow-brand-primary/20 border border-slate-200 dark:border-slate-800 transition-all duration-300"
+                    className="p-4 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] text-black/45 dark:text-white/45 hover:bg-brand-primary hover:text-black hover:shadow-lg hover:shadow-brand-primary/20 border border-black/15 dark:border-white/15 transition-all duration-300"
                   >
                     <Icon className="w-6 h-6" />
                   </motion.a>
@@ -70,7 +70,7 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 bg-slate-50 dark:bg-slate-900/50 p-10 rounded-[40px] border border-slate-200 dark:border-slate-800 shadow-sm"
+          className="space-y-6 bg-black/[0.04] dark:bg-white/[0.06] p-10 rounded-[40px] border border-black/15 dark:border-white/15 shadow-sm"
           onSubmit={e => e.preventDefault()}
         >
           <Input label="Name" placeholder="Jayashan Manodya" />
@@ -79,16 +79,16 @@ export function Contact() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-brand-primary/20 transition-all duration-300"
+            className="w-full bg-brand-primary hover:bg-brand-primary-hover text-black py-6 rounded-[24px] text-lg font-bold tracking-widest shadow-lg shadow-brand-primary/20 transition-all duration-300 border border-black"
           >
             Send Message
           </motion.button>
         </motion.form>
       </div>
 
-      <footer className="mt-32 pt-12 border-t border-slate-200 dark:border-slate-800 text-center">
+      <footer className="mt-32 pt-12 border-t border-black/15 dark:border-white/15 text-center">
         <p className="text-brand-primary font-bold text-1xl mb-4 tracking-wide">තෙරුවන් සරණයි...!</p>
-        <p className="text-slate-400 dark:text-slate-500 font-semibold tracking-widest text-xs uppercase">© 2026 Jayashan Manodya. All rights reserved.</p>
+        <p className="text-black/45 dark:text-white/45 font-semibold tracking-widest text-xs uppercase">© 2026 Jayashan Manodya. All rights reserved.</p>
       </footer>
     </Section>
   );

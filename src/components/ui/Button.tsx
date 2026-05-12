@@ -15,8 +15,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 }, ref) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variants = {
-    primary: 'bg-brand-primary hover:bg-brand-primary-hover text-white shadow-[0_0_15px_var(--brand-primary-glow)] hover:shadow-[0_0_25px_var(--brand-primary-glow-hover)] border border-transparent',
-    secondary: 'bg-brand-secondary hover:bg-brand-secondary-hover text-white shadow-[0_0_15px_rgba(79,70,229,0.5)] hover:shadow-[0_0_25px_rgba(79,70,229,0.7)] border border-transparent',
+    primary: 'bg-brand-primary hover:bg-brand-primary-hover text-black shadow-[0_0_15px_var(--brand-primary-glow)] hover:shadow-[0_0_25px_var(--brand-primary-glow-hover)] border border-black',
+    secondary: 'bg-brand-secondary hover:bg-brand-secondary-hover text-white shadow-[0_0_15px_rgba(0,0,0,0.35)] hover:shadow-[0_0_25px_rgba(0,0,0,0.5)] border border-transparent',
     outline: 'border-brand-primary text-brand-primary hover:bg-brand-primary/10 shadow-[0_0_10px_var(--brand-primary-glow)] hover:shadow-[0_0_20px_var(--brand-primary-glow-hover)]'
   };
   const sizes = {

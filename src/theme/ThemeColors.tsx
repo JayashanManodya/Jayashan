@@ -1,24 +1,22 @@
 
 export const themeColors = {
-    // Brand Colors
-    primary: "#6366f1", // Main brand color (Indigo)
-    primaryHover: "#4f46e5", // Hover state
-    primaryLight: "rgba(99, 102, 241, 0.1)", // Light version for backgrounds
-    primaryGlow: "rgba(99, 102, 241, 0.5)", // Glow effect
-    primaryGlowHover: "rgba(99, 102, 241, 0.7)",
+    // Brand — high-contrast yellow on black/white
+    primary: "#FFD700",
+    primaryHover: "#E6C200",
+    primaryLight: "rgba(255, 215, 0, 0.14)",
+    primaryGlow: "rgba(255, 215, 0, 0.45)",
+    primaryGlowHover: "rgba(255, 215, 0, 0.65)",
 
-    // Secondary / Accent
-    secondary: "#a855f7", // Purple
-    secondaryHover: "#9333ea",
+    secondary: "#000000",
+    secondaryHover: "#171717",
 
-    // Neutral Colors (can be adjusted as well)
     slate: {
-        50: "#f8fafc",
-        200: "#e2e8f0",
-        400: "#94a3b8",
-        500: "#64748b",
-        800: "#1e293b",
-        900: "#0f172a",
+        50: "#ffffff",
+        200: "#000000",
+        400: "#000000",
+        500: "#000000",
+        800: "#000000",
+        900: "#000000",
     }
 };
 

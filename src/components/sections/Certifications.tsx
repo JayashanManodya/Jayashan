@@ -45,7 +45,7 @@ export function Certifications() {
     return (
         <Section id="certifications" className="transition-colors duration-300">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Certifications</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">Certifications</h2>
                 <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
             </div>
 
@@ -58,16 +58,16 @@ export function Certifications() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         whileHover={{ y: -10 }}
-                        className="bg-white dark:bg-slate-900/50 p-8 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all border border-slate-200 dark:border-slate-800 group flex flex-col"
+                        className="bg-white dark:bg-black/[0.06] p-8 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all border border-black/15 dark:border-white/15 group flex flex-col"
                     >
-                        <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary transition-all duration-300">
-                            <Award size={32} className="text-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                        <div className="w-16 h-16 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-8 border border-black/15 dark:border-white/15 group-hover:bg-brand-primary transition-all duration-300">
+                            <Award size={32} className="text-brand-primary group-hover:text-black group-hover:scale-110 transition-all duration-300" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight tracking-tight group-hover:text-brand-primary transition-colors">{cert.name}</h3>
-                        <p className="text-slate-500 dark:text-slate-400 font-semibold tracking-wider text-sm mb-12 uppercase">{cert.issuer}</p>
+                        <h3 className="text-2xl font-bold text-black dark:text-white mb-2 leading-tight tracking-tight group-hover:text-brand-primary transition-colors">{cert.name}</h3>
+                        <p className="text-black/60 dark:text-white/60 font-semibold tracking-wider text-sm mb-12 uppercase">{cert.issuer}</p>
 
-                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
-                            <span className="text-sm font-bold text-slate-300 dark:text-slate-600 tracking-wider font-outfit">{cert.year}</span>
+                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-black/10 dark:border-white/15">
+                            <span className="text-sm font-bold text-black/35 dark:text-white/35 tracking-wider font-outfit">{cert.year}</span>
                             <a
                                 href={cert.link}
                                 target="_blank"
