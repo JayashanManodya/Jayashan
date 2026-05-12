@@ -22,13 +22,13 @@ export function SkillCard({
       viewport={{ once: true }}
       transition={{ delay, duration: 0.5 }}
       whileHover={{ y: -5 }}
-      className="p-8 rounded-[32px] bg-white dark:bg-black/[0.06] border border-black/15 dark:border-white/15 shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-300 group"
+      className="p-8 rounded-[32px] bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-300 group"
     >
       <div className="flex items-center gap-4 mb-8">
-        <div className="p-4 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary border border-black/15 dark:border-white/15 group-hover:bg-brand-primary group-hover:text-black transition-colors duration-300">
+        <div className="p-4 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary border border-slate-200 dark:border-slate-800 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
           <Icon size={28} />
         </div>
-        <h3 className="text-2xl font-bold text-black dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">{title}</h3>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">{title}</h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -37,7 +37,7 @@ export function SkillCard({
           return (
             <span
               key={index}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-black/65 dark:text-white/60 bg-black/[0.03] dark:bg-white/[0.05] rounded-2xl border border-black/15 dark:border-white/15 hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-300"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-300"
             >
               {iconData && (
                 <svg

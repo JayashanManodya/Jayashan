@@ -24,7 +24,7 @@ export function About() {
   return (
     <Section id="about" className="transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">About Me</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">About Me</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
       </div>
 
@@ -34,9 +34,9 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 text-black/70 dark:text-white/70 leading-relaxed text-lg"
+          className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed text-lg"
         >
-          <p className="font-semibold text-black dark:text-white">
+          <p className="font-semibold text-slate-900 dark:text-white">
             I am Jayashan Manodya, a second-year undergraduate (2Y2S) at the Sri Lanka Institute of Information Technology (SLIIT), specializing in Artificial Intelligence. Originally from Ratnapura, Sri Lanka, I am driven by a strong passion for solving complex problems through innovative and impactful technology solutions.          </p>
           <p>
             My academic journey has helped me build a solid foundation in programming, data structures, and software engineering. I particularly enjoy hands-on projects where I can experiment with emerging AI tools and bridge the gap between theoretical knowledge and practical application.          </p>
@@ -54,13 +54,13 @@ export function About() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-6 rounded-3xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/15 dark:border-white/15 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all group"
+              className="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/5 transition-all group"
             >
               <item.icon className="w-10 h-10 text-brand-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2 tracking-tight">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
                 {item.label}
               </h3>
-              <p className="text-sm text-black/60 dark:text-white/60 font-normal leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>

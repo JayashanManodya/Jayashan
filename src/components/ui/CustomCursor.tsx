@@ -55,9 +55,9 @@ export const CustomCursor = () => {
 
     return (
         <div className="fixed inset-0 pointer-events-none z-[9999] hidden md:block">
-            {/* Main cursor dot */}
+            {/* Main Cursor Point - Brand Primary Indigo Dot */}
             <motion.div
-                className="w-1.5 h-1.5 bg-brand-primary rounded-full fixed top-0 left-0"
+                className="w-1.5 h-1.5 bg-indigo-500 rounded-full fixed top-0 left-0"
                 style={{
                     x: mouseX,
                     y: mouseY,
@@ -66,13 +66,13 @@ export const CustomCursor = () => {
                 }}
             />
 
-            {/* Trailing ring */}
+            {/* Magic Trailing Circle - Brand Primary Indigo with Difference Blend Mode */}
             <motion.div
-                className="w-7 h-7 border border-brand-primary/50 rounded-full fixed top-0 left-0 flex items-center justify-center"
+                className="w-7 h-7 border border-indigo-500/50 rounded-full fixed top-0 left-0 flex items-center justify-center"
                 animate={{
                     scale: isHovering ? 1.5 : 1,
-                    backgroundColor: isHovering ? 'rgba(255, 215, 0, 0.12)' : 'transparent',
-                    borderColor: isHovering ? 'rgba(255, 215, 0, 0.85)' : 'rgba(255, 215, 0, 0.45)',
+                    backgroundColor: isHovering ? 'rgba(99, 102, 241, 0.1)' : 'transparent',
+                    borderColor: isHovering ? 'rgba(99, 102, 241, 0.8)' : 'rgba(99, 102, 241, 0.4)',
                 }}
                 style={{
                     x: trailX,

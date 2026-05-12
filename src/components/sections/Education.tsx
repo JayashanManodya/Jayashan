@@ -32,7 +32,7 @@ export function Education() {
   return (
     <Section id="education" className="transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">Academic Journey</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Academic Journey</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
       </div>
 

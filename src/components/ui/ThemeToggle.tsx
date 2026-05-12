@@ -25,7 +25,7 @@ export function ThemeToggle() {
     }} transition={{
       duration: 0.3
     }} className="absolute">
-      <Sun className="w-5 h-5 text-brand-primary" />
+      <Sun className="w-5 h-5 text-amber-500" />
     </motion.div>
   </motion.button>;
 }

@@ -57,7 +57,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-brand-primary/15 dark:bg-brand-primary/10 rounded-full blur-[100px] opacity-60"
+          className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-purple-50 dark:bg-purple-900/10 rounded-full blur-[100px] opacity-60"
         />
         <motion.div
           animate={{
@@ -82,7 +82,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-[5%] left-[20%] w-[30%] h-[40%] bg-brand-primary/10 dark:bg-brand-primary/10 rounded-full blur-[80px] opacity-50"
+          className="absolute -bottom-[5%] left-[20%] w-[30%] h-[30%] bg-blue-50 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-50"
         />
       </div>
 
@@ -91,12 +91,12 @@ export function Hero() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-black dark:border-white rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-slate-900 dark:border-white rounded-full"
         />
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-black dark:border-white rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-slate-900 dark:border-white rounded-full"
         />
       </div>
 
@@ -116,10 +116,10 @@ export function Hero() {
                   I'm Jayashan Manodya
                   <span className="inline-block w-[4px] h-[0.8em] ml-1 align-middle" />
                 </h1>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black dark:text-white leading-[1.1] col-start-1 row-start-1 tracking-tight">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white leading-[1.1] col-start-1 row-start-1 tracking-tight">
                   I'm{" "}
                   <span className="text-brand-primary">{text.substring(0, 8)}</span>
-                  <span className="text-black dark:text-white">{text.substring(8)}</span>
+                  <span className="text-slate-900 dark:text-white">{text.substring(8)}</span>
                   <motion.span
                     animate={{ opacity: [0, 1, 0] }}
                     transition={{
@@ -136,7 +136,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg text-black/70 dark:text-white/70 max-w-lg leading-relaxed"
+                className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
               >
                 Passionate about building intelligent, reliable software solutions using modern technologies. I enjoy turning complex problems into clean, efficient systems by blending logical thinking, creativity, and continuous experimentation with emerging tools.              </motion.p>
             </div>
@@ -149,7 +149,7 @@ export function Hero() {
             >
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-10 py-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl font-semibold hover:bg-black/85 dark:hover:bg-white/90 transition-all shadow-lg hover:shadow-xl active:scale-95"
+                className="px-10 py-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl font-semibold hover:bg-slate-800 dark:hover:bg-slate-200 transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 About
               </button>
@@ -157,7 +157,7 @@ export function Hero() {
                 href="https://drive.google.com/file/d/14CyIBARGCdv-_9qZd03f39c1-HMKTLkm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 bg-brand-primary text-black rounded-2xl font-semibold hover:bg-brand-primary-hover transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center border border-black"
+                className="px-10 py-4 bg-brand-primary text-white rounded-2xl font-semibold hover:bg-brand-primary-hover transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
               >
                 Download CV
               </a>
@@ -194,9 +194,9 @@ export function Hero() {
                 whileHover={{ scale: 1.1, rotate: 45 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white dark:bg-black rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white dark:border-black group"
+                className="absolute -bottom-8 -right-8 w-20 h-20 md:w-28 md:h-28 bg-white dark:bg-[#030014] rounded-full flex items-center justify-center shadow-2xl border-[12px] border-white dark:border-[#030014] group"
               >
-                <div className="w-full h-full bg-brand-primary rounded-full flex items-center justify-center text-black transition-transform group-hover:scale-95 border border-black">
+                <div className="w-full h-full bg-brand-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-95">
                   <ArrowUpRight size={40} className="md:w-12 md:h-12" />
                 </div>
               </motion.button>
@@ -206,14 +206,14 @@ export function Hero() {
                 <span className="text-xs font-semibold text-brand-primary rotate-90 whitespace-nowrap mb-8 tracking-widest uppercase">
                   GET IN TOUCH
                 </span>
-                <div className="w-px h-12 bg-black/20 dark:bg-white/25" />
-                <a href="mailto:kpjmp28@gmail.com" title="Email Me" className="p-2 text-black/45 dark:text-white/45 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                <div className="w-px h-12 bg-slate-200" />
+                <a href="mailto:kpjmp28@gmail.com" title="Email Me" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
                   <Mail size={20} />
                 </a>
-                <a href="https://github.com/JayashanManodya" target="_blank" rel="noopener noreferrer" title="GitHub" className="p-2 text-black/45 dark:text-white/45 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                <a href="https://github.com/JayashanManodya" target="_blank" rel="noopener noreferrer" title="GitHub" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
                   <Github size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/jayashanmanodya/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="p-2 text-black/45 dark:text-white/45 hover:text-brand-primary transition-all duration-300 hover:scale-125">
+                <a href="https://www.linkedin.com/in/jayashanmanodya/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="p-2 text-slate-400 hover:text-brand-primary transition-all duration-300 hover:scale-125">
                   <Linkedin size={20} />
                 </a>
               </div>

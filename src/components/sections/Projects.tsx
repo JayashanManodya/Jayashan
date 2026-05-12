@@ -211,7 +211,7 @@ export function Projects() {
   return (
     <Section id="projects" className="transition-colors duration-300">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4 tracking-tight">Featured Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Featured Projects</h2>
         <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
 
         <div className="flex flex-wrap justify-center gap-3 mt-12">
@@ -220,8 +220,8 @@ export function Projects() {
               key={cat}
               onClick={() => setFilter(cat)}
               className={`px-8 py-3 rounded-full text-sm font-semibold tracking-wider transition-all duration-300 shadow-sm ${filter === cat
-                ? 'bg-brand-primary text-black border-2 border-black shadow-brand-primary/20 shadow-lg scale-105'
-                : 'bg-white dark:bg-black text-black/55 dark:text-white/55 border-2 border-black/15 dark:border-white/15 hover:bg-black/[0.04] dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
+                ? 'bg-brand-primary text-white shadow-brand-primary/20 shadow-lg scale-105'
+                : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-2 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
                 }`}
             >
               {cat}
@@ -243,11 +243,11 @@ export function Projects() {
             onClick={goPrev}
             disabled={clampedPage === 0}
             aria-label="Previous projects page"
-            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black/15 dark:border-white/15 bg-white dark:bg-black text-black dark:text-white shadow-sm transition-all duration-300 hover:bg-black/[0.04] dark:hover:bg-white/10 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-black"
+            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 shadow-sm transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-slate-900"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <span className="text-sm font-semibold tracking-wide text-black/65 dark:text-white/65 min-w-[6rem] text-center tabular-nums">
+          <span className="text-sm font-semibold tracking-wide text-slate-600 dark:text-slate-400 min-w-[6rem] text-center tabular-nums">
             Page {clampedPage + 1} of {totalPages}
           </span>
           <button
@@ -255,7 +255,7 @@ export function Projects() {
             onClick={goNext}
             disabled={clampedPage >= totalPages - 1}
             aria-label="Next projects page"
-            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black/15 dark:border-white/15 bg-white dark:bg-black text-black dark:text-white shadow-sm transition-all duration-300 hover:bg-black/[0.04] dark:hover:bg-white/10 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-black"
+            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 shadow-sm transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-brand-primary/40 disabled:opacity-40 disabled:pointer-events-none disabled:hover:bg-white dark:disabled:hover:bg-slate-900"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

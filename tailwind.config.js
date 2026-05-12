@@ -8,11 +8,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        rc: {
-          navy: '#243340',
-          'navy-muted': '#2f4455',
-          ink: '#1a2833',
-        },
         brand: {
           primary: 'var(--brand-primary)',
           'primary-hover': 'var(--brand-primary-hover)',
