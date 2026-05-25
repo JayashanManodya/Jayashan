@@ -9,6 +9,7 @@ export function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const fullText = "Jayashan Manodya";
+  const cvUrl = import.meta.env.VITE_CV_URL;
 
   useEffect(() => {
     const handleTyping = () => {
@@ -154,7 +155,7 @@ export function Hero() {
                 About
               </button>
               <a
-                href="https://drive.google.com/file/d/14CyIBARGCdv-_9qZd03f39c1-HMKTLkm/view?usp=sharing"
+                href={cvUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-4 bg-brand-primary text-white rounded-2xl font-semibold hover:bg-brand-primary-hover transition-all shadow-lg hover:shadow-xl active:scale-95 inline-block text-center"
