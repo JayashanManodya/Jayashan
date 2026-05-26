@@ -1,56 +1,128 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, BookOpen, Quote } from 'lucide-react';
 import { Section } from '../ui/Section';
-import { Button } from '../ui/Button';
+
+interface MediumItem {
+    title: string;
+    link: string;
+    pubDate: string;
+    author: string;
+    thumbnail?: string;
+    description?: string;
+}
+
+interface MediumResponse {
+    status: string;
+    items: MediumItem[];
+}
+
+const mediumUsername = 'jayashanmanodya';
+const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
+const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
 
 export function Blogs() {
+    const [posts, setPosts] = useState<MediumItem[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const controller = new AbortController();
+
+        fetch(rss2jsonUrl, { signal: controller.signal })
+            .then((response) => response.json())
+            .then((data: MediumResponse) => {
+                if (data?.status !== 'ok' || !Array.isArray(data.items)) {
+                    throw new Error('Unable to load Medium posts');
+                }
+
+                setPosts(data.items.slice(0, 3));
+            })
+            .catch((fetchError) => {
+                if (fetchError.name !== 'AbortError') {
+                    setError('Unable to load Medium posts right now.');
+                }
+            })
+            .finally(() => setLoading(false));
+
+        return () => controller.abort();
+    }, []);
+
     return (
         <Section id="blogs" className="transition-colors duration-300">
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Blogs</h2>
                 <div className="h-2 w-24 bg-brand-primary mx-auto rounded-full" />
-                <p className="mt-6 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                    Sharing my thoughts, insights, and lessons learned on technology, artificial intelligence, and software engineering.
-                </p>
             </div>
 
-            <div className="max-w-6xl mx-auto px-4">
-                {/* Medium CTA Card */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="relative rounded-[32px] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 group"
-                >
-                    <div className="flex-1">
-                        <div className="flex items-center gap-3 text-brand-primary mb-4">
-                            <BookOpen className="w-6 h-6" />
-                            <span className="font-bold tracking-wider text-sm uppercase">Medium Blog</span>
-                        </div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
-                            Read my latest articles on Medium
-                        </h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl mb-0">
-                            I regularly publish technical articles and thought pieces. Follow along to stay updated with the latest in AI and development.
-                        </p>
-                    </div>
-                    <div className="flex-shrink-0">
-                        <Button
-                            size="lg"
-                            className="bg-brand-primary hover:bg-brand-primary-hover text-white rounded-full px-8 py-6 text-lg transition-all duration-300 shadow-[0_0_20px_var(--brand-primary-glow)] group-hover:scale-105 active:scale-95"
-                            onClick={() => window.open('https://medium.com/@jayashanmanodya', '_blank')}
-                        >
-                            <ExternalLink className="w-5 h-5 mr-3" />
-                            Visit Medium
-                        </Button>
-                    </div>
+            <div className="max-w-6xl mx-auto px-4 text-center">
+                <div className="mb-8 text-center">
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+                        Latest blog highlights
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                        Swipe through the newest articles published on my Medium blog.
+                    </p>
+                </div>
 
-                    {/* Subtle Background Elements */}
-                    <div className="absolute top-[-10%] right-[-5%] opacity-5 dark:opacity-10 group-hover:rotate-12 transition-transform duration-700">
-                        <Quote size={200} className="text-brand-primary" />
+                {loading && (
+                    <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 text-slate-700 dark:text-slate-300 shadow-sm">
+                        Loading latest Medium posts...
                     </div>
-                </motion.div>
+                )}
+
+                {error && (
+                    <div className="rounded-3xl border border-rose-200 bg-rose-50 dark:border-rose-800 dark:bg-rose-950/40 p-8 text-rose-700 dark:text-rose-200 shadow-sm">
+                        {error}
+                    </div>
+                )}
+
+                {!loading && !error && posts.length === 0 && (
+                    <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 text-slate-700 dark:text-slate-300 shadow-sm">
+                        No posts found yet. Please check back soon.
+                    </div>
+                )}
+
+                <div className="overflow-x-auto pb-4">
+                    <div className="flex gap-6 min-w-max px-1">
+                        {posts.map((post) => (
+                            <motion.a
+                                key={post.link}
+                                href={post.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="min-w-[300px] max-w-[360px] shrink-0 rounded-[28px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                            >
+                                {post.thumbnail ? (
+                                    <div className="h-44 overflow-hidden">
+                                        <img
+                                            src={post.thumbnail}
+                                            alt={post.title}
+                                            className="h-full w-full object-cover"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="h-44 bg-gradient-to-br from-brand-primary to-slate-500" />
+                                )}
+                                <div className="p-6">
+                                    <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
+                                        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary">{post.author}</span>
+                                        <span className="text-xs text-slate-500 dark:text-slate-400">{new Date(post.pubDate).toLocaleDateString()}</span>
+                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug">{post.title}</h4>
+                                    {post.description && (
+                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-6 line-clamp-4">
+                                            {post.description.replace(/(<([^>]+)>)/gi, '')}
+                                        </p>
+                                    )}
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+                </div>
             </div>
         </Section>
     );
