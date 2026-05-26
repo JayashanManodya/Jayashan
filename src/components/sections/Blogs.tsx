@@ -9,12 +9,45 @@ interface MediumItem {
     author: string;
     thumbnail?: string;
     description?: string;
+    content?: string;
 }
 
 interface MediumResponse {
     status: string;
     items: MediumItem[];
 }
+
+const extractImageUrl = (html?: string) => {
+    if (!html) return undefined;
+    const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+    return match?.[1];
+};
+
+const getThumbnail = (post: MediumItem) => {
+    return post.thumbnail || extractImageUrl(post.content) || extractImageUrl(post.description);
+};
+
+const getDaySuffix = (day: number) => {
+    if (day >= 11 && day <= 13) return 'th';
+    switch (day % 10) {
+        case 1:
+            return 'st';
+        case 2:
+            return 'nd';
+        case 3:
+            return 'rd';
+        default:
+            return 'th';
+    }
+};
+
+const formatPublishedDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return `Published on ${month} ${day}${getDaySuffix(day)} ${year}`;
+};
 
 const mediumUsername = 'jayashanmanodya';
 const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
@@ -96,10 +129,10 @@ export function Blogs() {
                                 transition={{ duration: 0.5 }}
                                 className="min-w-[300px] max-w-[360px] shrink-0 rounded-[28px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
                             >
-                                {post.thumbnail ? (
+                                {getThumbnail(post) ? (
                                     <div className="h-44 overflow-hidden">
                                         <img
-                                            src={post.thumbnail}
+                                            src={getThumbnail(post)}
                                             alt={post.title}
                                             className="h-full w-full object-cover"
                                         />
@@ -108,16 +141,15 @@ export function Blogs() {
                                     <div className="h-44 bg-gradient-to-br from-brand-primary to-slate-500" />
                                 )}
                                 <div className="p-6">
-                                    <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
-                                        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary">{post.author}</span>
-                                        <span className="text-xs text-slate-500 dark:text-slate-400">{new Date(post.pubDate).toLocaleDateString()}</span>
-                                    </div>
                                     <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug">{post.title}</h4>
                                     {post.description && (
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-6 line-clamp-4">
+                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-6 line-clamp-4 mb-4">
                                             {post.description.replace(/(<([^>]+)>)/gi, '')}
                                         </p>
                                     )}
+                                    <p className="text-sm text-slate-900 dark:text-white mt-4">
+                                        {formatPublishedDate(post.pubDate)}
+                                    </p>
                                 </div>
                             </motion.a>
                         ))}
