@@ -18,7 +18,7 @@ const allProjects = [{
     'Multilingual'
   ],
   category: ['Full Stack', 'Gen AI'],
-  image: 'projectPhotos/kiko.png',
+  image: 'projectPhotos/kiko-pic.png',
   githubUrl: 'https://github.com/JayashanManodya/Kapuruka_Shopping_Agent',
   demoUrl: 'https://drive.google.com/file/d/1BQSnxiufotrtzKIkE_Js2mjcZFP_QeQw/view?usp=sharing',
 }, {
