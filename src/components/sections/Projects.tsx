@@ -18,7 +18,7 @@ const allProjects = [{
     'Multilingual'
   ],
   category: ['Full Stack', 'Gen AI'],
-  image: 'projectPhotos/kiko-pic.png',
+  image: '/projectPhotos/kiko-pic.png',
   githubUrl: 'https://github.com/JayashanManodya/Kapuruka_Shopping_Agent',
   demoUrl: 'https://drive.google.com/file/d/1BQSnxiufotrtzKIkE_Js2mjcZFP_QeQw/view?usp=sharing',
 }, {
@@ -40,7 +40,7 @@ const allProjects = [{
     'RandomForest'
   ],
   category: ['Full Stack', 'ML', 'DL', 'Gen AI'],
-  image: 'projectPhotos/teaPlanter.png',
+  image: '/projectPhotos/teaPlanter.png',
   githubUrl: 'https://github.com/JayashanManodya/Tea-Planter',
   demoUrl: 'https://www.teaplanter.online/',
 },
@@ -57,7 +57,7 @@ const allProjects = [{
     'AI Agents'
   ],
   category: ['Gen AI'],
-  image: 'projectPhotos/ikms_new.png',
+  image: '/projectPhotos/ikms_new.png',
   githubUrl: 'https://github.com/JayashanManodya/ikms-rag-agent-system',
   demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
 },
@@ -75,7 +75,7 @@ const allProjects = [{
     'Vite'
   ],
   category: ['Full Stack'],
-  image: 'projectPhotos/FuelAlert_low.png',
+  image: '/projectPhotos/FuelAlert_low.png',
   githubUrl: 'https://github.com/JayashanManodya/Fuel-Watch-LK',
   demoUrl: 'https://fuelalert.online/',
 },
@@ -107,7 +107,7 @@ const allProjects = [{
     'Google Colab'
   ],
   category: ['Full Stack', 'ML'],
-  image: 'projectPhotos/weatherLK.png',
+  image: '/projectPhotos/weatherLK.png',
   githubUrl: 'https://github.com/JayashanManodya/WeatherLK',
 },
 {
@@ -123,7 +123,7 @@ const allProjects = [{
     'PostCSS'
   ],
   category: ['Others'],
-  image: 'projectPhotos/jayashan.online.png',
+  image: '/projectPhotos/jayashan.online.png',
   githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
@@ -141,7 +141,7 @@ const allProjects = [{
     'Full Stack'
   ],
   category: ['Full Stack', 'Gen AI'],
-  image: 'projectPhotos/railLink.png',
+  image: '/projectPhotos/railLink.png',
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
 {
@@ -158,7 +158,7 @@ const allProjects = [{
     'OCR'
   ],
   category: ['DL', 'Full Stack'],
-  image: 'projectPhotos/plateX.jpg',
+  image: '/projectPhotos/plateX.jpg',
   githubUrl: 'https://github.com/JayashanManodya/PlateX',
 },
 {
@@ -175,7 +175,7 @@ const allProjects = [{
     'File Handling'
   ],
   category: 'Full Stack',
-  image: 'projectPhotos/InkSpire-BookStore.jpg',
+  image: '/projectPhotos/InkSpire-BookStore.jpg',
   githubUrl: 'https://github.com/JayashanManodya/Inkspire_Bookstore',
 },
 {
@@ -183,7 +183,7 @@ const allProjects = [{
   description: 'An IoT-based smart room automation system that monitors and controls temperature, humidity, and lighting using real-time sensor data. Built with an ESP8266 microcontroller and integrated with the Blynk app for remote monitoring, manual control, and automation management.',
   tags: ['IoT', 'ESP8266', 'Embedded C++', 'Blynk', 'DHT11', 'BH1750'],
   category: ['Others'],
-  image: 'projectPhotos/Automated-Room-Comfort-Control-System.png',
+  image: '/projectPhotos/Automated-Room-Comfort-Control-System.png',
   githubUrl: 'https://github.com/JayashanManodya/Automated-Room-Comfort-Control-System',
 },
 {
@@ -191,7 +191,7 @@ const allProjects = [{
   description: 'My first personal website built with HTML/CSS/JS. Showcases my early journey into web development.',
   tags: ['HTML', 'CSS', 'JavaScript'],
   category: ['Others'],
-  image: 'projectPhotos/Portfolio-V1.png',
+  image: '/projectPhotos/Portfolio-V1.png',
   demoUrl: 'https://jayashanmanodya.github.io/Portfolio/'
 }];
 
