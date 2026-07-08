@@ -4,6 +4,24 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'Kapuruka Shopping Agent (KIKO)',
+  description:
+    'An AI-powered conversational shopping assistant for Kapruka.com that lets users search products, manage carts, and complete checkout through natural language chat. Built with a multi-agent backend using FastAPI, LangGraph, and LangChain, plus a modern Next.js frontend with multilingual support for English, Sinhala, and Tamil.',
+  tags: [
+    'FastAPI',
+    'LangGraph',
+    'LangChain',
+    'Next.js',
+    'React',
+    'Python',
+    'AI Agents',
+    'Multilingual'
+  ],
+  category: ['Full Stack', 'Gen AI'],
+  image: 'projectPhotos/kiko outro.png',
+  githubUrl: 'https://github.com/JayashanManodya/Kapuruka_Shopping_Agent',
+  demoUrl: 'https://drive.google.com/file/d/1BQSnxiufotrtzKIkE_Js2mjcZFP_QeQw/view?usp=sharing',
+}, {
   title: 'TeaPlanter · AI Powered Tea Estate Management',
   description:
     'In progress: an AI-powered tea estate management platform with role-based dashboards for harvest, workforce, attendance, inventory, and finances. Includes YOLOv8–based tea leaf disease prediction, a multi-agent AI assistant, and price forecasting (XGBoost).',
