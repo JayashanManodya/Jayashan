@@ -4,10 +4,10 @@ import { Section } from '../ui/Section';
 
 const experiences = [
     {
-        title: "Lead Graphic Designer",
+        title: "Lead Creative Designer",
         company: "Glanz Digital",
         period: "2025 - Present",
-        description: "Leading visual design efforts as a remote part-time Lead Graphic Designer, responsible for creating impactful visual content and digital assets to support brand identity and marketing objectives."
+        description: "Leading visual design efforts as a remote part-time Lead Creative Designer, responsible for creating impactful visual content and digital assets to support brand identity and marketing objectives."
     },
     {
         title: "Founder & Senior Graphic Designer",
