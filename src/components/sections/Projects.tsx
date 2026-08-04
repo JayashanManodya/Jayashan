@@ -4,6 +4,28 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
+  title: 'WikiMind — AI-Powered Intelligent Knowledge Management Platform',
+  description:
+    'Full-stack AI-Powered knowledge Management System inspired by Andrej Karpathy’s LLM Wiki concept. It transforms unstructured documents into a structured, interlinked Wikipedia-style Knowledge Base and an Interactive 2D Physics Knowledge Graph. Features a LangGraph StateGraph agentic flow, LangSmith benchmark verification (100% QA correctness & groundedness), zero-hallucination grounded QA assistant with click-through citations, single-pass ingestion engine, and cross-device Turso Cloud Database connection pooling.',
+  tags: [
+    'FastAPI',
+    'LangGraph',
+    'LangSmith',
+    'React',
+    'Vite',
+    'Turso DB',
+    'Pinecone',
+    'LlamaParse',
+    'Python',
+    'OpenAI',
+    'AI Agents',
+    'Full Stack'
+  ],
+  category: ['Full Stack', 'Gen AI'],
+  image: '/projectPhotos/wikimind.png',
+  githubUrl: 'https://github.com/JayashanManodya/WikiMind',
+  demoUrl: 'https://drive.google.com/file/d/1JmHts0mBUX8YFqG5hovSccwJZDmMnPfY/view?usp=sharing',
+}, {
   title: 'Kapuruka Shopping Agent (KIKO)',
   description:
     'An AI-powered conversational shopping assistant for Kapruka.com that lets users search products, manage carts, and complete checkout through natural language chat. Built with a multi-agent backend using FastAPI, LangGraph, and LangChain, plus a modern Next.js frontend with multilingual support for English, Sinhala, and Tamil.',
