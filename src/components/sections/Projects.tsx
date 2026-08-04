@@ -4,7 +4,7 @@ import { Section } from '../ui/Section';
 import { ProjectCard } from '../ui/ProjectCard';
 
 const allProjects = [{
-  title: 'WikiMind — AI-Powered Intelligent Knowledge Management Platform',
+  title: 'WikiMind - AI-Powered Intelligent Knowledge Management Platform',
   description:
     'Full-stack AI-Powered knowledge Management System inspired by Andrej Karpathy’s LLM Wiki concept. It transforms unstructured documents into a structured, interlinked Wikipedia-style Knowledge Base and an Interactive 2D Physics Knowledge Graph. Features a LangGraph StateGraph agentic flow, LangSmith benchmark verification (100% QA correctness & groundedness), zero-hallucination grounded QA assistant with click-through citations, single-pass ingestion engine, and cross-device Turso Cloud Database connection pooling.',
   tags: [
