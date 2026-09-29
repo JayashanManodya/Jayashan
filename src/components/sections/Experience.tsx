@@ -2,7 +2,27 @@ import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 import { Section } from '../ui/Section';
 
-const experiences = [
+interface ExperienceItem {
+    title: string;
+    company: string;
+    period: string;
+    description?: string;
+    points?: string[];
+}
+
+const experiences: ExperienceItem[] = [
+    {
+        title: "AI & Automation Intern",
+        company: "Cherry Global AI",
+        period: "2026 - Present",
+        points: [
+            "Designed and engineered AI-powered applications with agentic workflows, automation, and intelligent decision-making.",
+            "Implemented and integrated AI solutions using LLMs, RAG, semantic search, and external APIs.",
+            "Developed, tested, and deployed AI/MCP solutions across local and cloud environments.",
+            "Evaluated and optimized AI systems by testing accuracy, response time, token usage, and overall performance.",
+            "Researched WikiLLM-based knowledge systems, focusing on RAG, knowledge retrieval, and AI-powered question answering."
+        ]
+    },
     {
         title: "Lead Creative Designer",
         company: "Glanz Digital",
@@ -44,7 +64,19 @@ export function Experience() {
                             <p className="text-lg font-bold text-brand-primary tracking-wide flex items-center gap-2 mb-4">
                                 <Briefcase size={20} /> {exp.company}
                             </p>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">{exp.description}</p>
+                            {exp.description && (
+                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">{exp.description}</p>
+                            )}
+                            {exp.points && exp.points.length > 0 && (
+                                <ul className="space-y-2.5 max-w-2xl text-slate-600 dark:text-slate-400 font-normal">
+                                    {exp.points.map((point, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary mt-2.5 flex-shrink-0" />
+                                            <span className="leading-relaxed">{point}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     </motion.div>
                 ))}
