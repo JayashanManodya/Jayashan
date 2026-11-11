@@ -67,23 +67,6 @@ const allProjects = [{
   demoUrl: 'https://www.teaplanter.online/',
 },
 {
-  title: 'Multi-Agent Retrieval-Augmented Knowledge System',
-  description: 'A high-accuracy RAG system that answers questions from PDFs using query planning, vector embeddings, Pinecone DB, and multi-agent orchestration. Built with FastAPI, LangChain, and LangGraph, it ensures context-grounded answers with minimal hallucinations.',
-  tags: [
-    'FastAPI',
-    'LangChain',
-    'LangGraph',
-    'Pinecone',
-    'Python',
-    'RAG',
-    'AI Agents'
-  ],
-  category: ['Gen AI'],
-  image: '/projectPhotos/ikms_new.png',
-  githubUrl: 'https://github.com/JayashanManodya/ikms-rag-agent-system',
-  demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
-},
-{
   title: 'FuelAlert - Real-Time Fuel Availability Tracker',
   description: 'A real-time fuel station monitoring platform for Sri Lanka with interactive maps, community-driven fuel status updates, trilingual support (English, Sinhala, Tamil), and an admin panel. Built with React, Express, Neon PostgreSQL, Drizzle ORM, and Leaflet maps.',
   tags: [
@@ -102,19 +85,66 @@ const allProjects = [{
   demoUrl: 'https://fuelalert.online/',
 },
 {
-  title: 'BookLink · Community Book Exchange',
-  description:
-    'BookLink is a community app for listing books and arranging in-person exchanges: browse listings, send exchange requests, chat with listers, manage a wishlist, leave reviews, and report issues. The product is a React Native (Expo) client with an Express API backed by MongoDB, using Clerk for authentication.',
+  title: 'Multi-Agent Retrieval-Augmented Knowledge System',
+  description: 'A high-accuracy RAG system that answers questions from PDFs using query planning, vector embeddings, Pinecone DB, and multi-agent orchestration. Built with FastAPI, LangChain, and LangGraph, it ensures context-grounded answers with minimal hallucinations.',
   tags: [
-    'React Native',
-    'Expo',
-    'Express',
-    'MongoDB',
-    'Clerk',
-    'TypeScript',
-    'REST API'
+    'FastAPI',
+    'LangChain',
+    'LangGraph',
+    'Pinecone',
+    'Python',
+    'RAG',
+    'AI Agents'
   ],
-  category: ['Mobile', 'Full Stack'],
+  category: ['Gen AI'],
+  image: '/projectPhotos/ikms_new.png',
+  githubUrl: 'https://github.com/JayashanManodya/ikms-rag-agent-system',
+  demoUrl: 'https://ikms-rag-agent-system.vercel.app/',
+},
+{
+  title: 'Workio - Agentic AI Powered Home Services Platform for Sri Lanka',
+  description:
+    'An Agentic AI-powered web and mobile home services platform for Sri Lanka connecting residents with trusted technicians via multi-agent orchestration. Built as a university team project featuring a LangGraph supervisor/specialist architecture, MCP backend tool integration, intelligent worker matching, conversational booking, AI-assisted community posts, and dynamic interactive AI UI cards—engineered across React 19, Flutter, ASP.NET Core 8, FastAPI, PostgreSQL, Entity Framework Core, and real-time SignalR messaging with JWT/Google auth and NIC verification.',
+  tags: [
+    'LangGraph',
+    'LangChain',
+    'MCP',
+    'OpenAI API',
+    'Python',
+    'FastAPI',
+    'React',
+    'ASP.NET Core',
+    'PostgreSQL',
+    'Flutter',
+    'SignalR',
+    'AI Agents'
+  ],
+  category: ['Full Stack', 'Gen AI', 'Mobile'],
+  image: '/projectPhotos/workio.png',
+  githubUrl: 'https://github.com/NadeeshaMalshan/Workio',
+  demoUrl: 'https://drive.google.com/file/d/1yEJ_E6lSqJ0sWj-1J2TR_fGJWel8Dg-j/view',
+},
+{
+  title: 'Ames Housing Price Prediction - End-to-End Machine Learning Project',
+  description:
+    'End-to-end machine learning system and interactive FastAPI web application that predicts residential property prices using the Ames Housing Dataset (1,460 records, 81 features). Built as a collaborative university ML project covering EDA, 16 engineered features, Pearson and Mutual Information feature selection, leakage-free Scikit-learn preprocessing with log-target transformation, and 5-fold CV tuning across Ridge, Random Forest, XGBoost, LightGBM, and CatBoost—achieving R² 0.9041 (MAE $16,528.23, RMSE $27,116.86) with CatBoost and R² 0.9073 with XGBoost.',
+  tags: [
+    'Python',
+    'FastAPI',
+    'Scikit-learn',
+    'CatBoost',
+    'XGBoost',
+    'LightGBM',
+    'Random Forest',
+    'Pandas',
+    'NumPy',
+    'Matplotlib',
+    'Seaborn',
+    'Jupyter Notebook'
+  ],
+  category: ['ML', 'Full Stack'],
+  image: '/projectPhotos/ames-housing-ml-project.png',
+  githubUrl: 'https://github.com/VenuriDampahalage/ames-housing-price-prediction',
 },
 {
   title: 'WeatherLK',
@@ -133,20 +163,21 @@ const allProjects = [{
   githubUrl: 'https://github.com/JayashanManodya/WeatherLK',
 },
 {
-  title: 'Portfolio Website',
-  description: 'Developed a modern, performance-focused portfolio website using React + TypeScript, featuring a dark/light adaptive theme, smooth Framer Motion animations, and a mobile-first responsive architecture.',
+  title: 'PlateX',
+  description: 'An AI-powered computer vision system that detects and recognizes vehicle license plates from images using YOLOv12 and PaddleOCR. The system includes custom post-processing to format Sri Lankan-style license plates and extract vehicle details such as province, category, and fuel type, with a Flask-based web interface for visualization and CSV export.',
   tags: [
-    'React',
-    'TypeScript',
-    'Tailwind CSS',
-    'Framer Motion',
-    'Lucide React',
-    'Vite',
-    'PostCSS'
+    'Python',
+    'Computer Vision',
+    'YOLO',
+    'PaddleOCR',
+    'Flask',
+    'OpenCV',
+    'Roboflow',
+    'OCR'
   ],
-  category: ['Others'],
-  image: '/projectPhotos/jayashan.online.png',
-  githubUrl: 'https://github.com/JayashanManodya/Jayashan',
+  category: ['DL', 'Full Stack'],
+  image: '/projectPhotos/plateX.jpg',
+  githubUrl: 'https://github.com/JayashanManodya/PlateX',
 },
 {
   title: 'RailLink – Next-Gen Train Scheduling & Booking System',
@@ -167,21 +198,35 @@ const allProjects = [{
   githubUrl: 'https://github.com/JayashanManodya/RailLink#',
 },
 {
-  title: 'PlateX',
-  description: 'An AI-powered computer vision system that detects and recognizes vehicle license plates from images using YOLOv12 and PaddleOCR. The system includes custom post-processing to format Sri Lankan-style license plates and extract vehicle details such as province, category, and fuel type, with a Flask-based web interface for visualization and CSV export.',
+  title: 'BookLink · Community Book Exchange',
+  description:
+    'BookLink is a community app for listing books and arranging in-person exchanges: browse listings, send exchange requests, chat with listers, manage a wishlist, leave reviews, and report issues. The product is a React Native (Expo) client with an Express API backed by MongoDB, using Clerk for authentication.',
   tags: [
-    'Python',
-    'Computer Vision',
-    'YOLO',
-    'PaddleOCR',
-    'Flask',
-    'OpenCV',
-    'Roboflow',
-    'OCR'
+    'React Native',
+    'Expo',
+    'Express',
+    'MongoDB',
+    'Clerk',
+    'TypeScript',
+    'REST API'
   ],
-  category: ['DL', 'Full Stack'],
-  image: '/projectPhotos/plateX.jpg',
-  githubUrl: 'https://github.com/JayashanManodya/PlateX',
+  category: ['Mobile', 'Full Stack'],
+},
+{
+  title: 'Portfolio Website',
+  description: 'Developed a modern, performance-focused portfolio website using React + TypeScript, featuring a dark/light adaptive theme, smooth Framer Motion animations, and a mobile-first responsive architecture.',
+  tags: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Framer Motion',
+    'Lucide React',
+    'Vite',
+    'PostCSS'
+  ],
+  category: ['Others'],
+  image: '/projectPhotos/jayashan.online.png',
+  githubUrl: 'https://github.com/JayashanManodya/Jayashan',
 },
 {
   title: 'InkSpire BookStore',
